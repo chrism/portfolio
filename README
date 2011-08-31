@@ -1,16 +1,23 @@
-== Chris Masters Portfolio
+==Chris Masters Portfolio
 
 Using Postgres so that should be easy to push to heroku
 
 Official release of Rails 3.1.0 out today, so using that
 
-= Fixing gemspec error with date using rvm
+=Fixing gemspec error with date using rvm
 
 gem update --system
 rvm gemset empty yourgemsetname
 gem install bundler
 bundle install
 
-= Pow Server
+=Pow Server
 
 remember to add powder gem if needed
+
+=Postgres
+
+create development database
+installed using homebrew user is same as homebrew installation
+
+createdb chrismasters_development
