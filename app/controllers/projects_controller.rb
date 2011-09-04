@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  
+  set_tab :project
+  
   # GET /projects
   # GET /projects.json
   def index

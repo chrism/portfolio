@@ -7,6 +7,9 @@ gem 'rails', '3.1.0'
 
 gem 'pg'
 
+# for navigation
+
+gem "tabs_on_rails"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,7 +32,9 @@ gem 'jquery-rails'
 
 
 group :development do
-  gem 'guard-livereload'
+  gem 'rb-fsevent'
+  gem "guard-livereload", "~> 0.3.1"
+  gem "growl_notify"
 end
 
 
