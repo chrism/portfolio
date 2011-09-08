@@ -1,25 +1,26 @@
 <h1>Listing projects</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= project.description %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+	<article>
+		<h2><%= project.title %></h2>
+		<p>
+			<%= project.description %>
+		</p>
+		<% if project.projectimages %>		
+		<ul>
+			<% project.projectimages.each do |projectimage| %>
+		    <li><%= projectimage.url %></li>
+			<% end %>
+		</ul>
+		<% end %>
+		<%= link_to 'View project', project %>
+		<footer>
+		<p>
+			<%= link_to 'Edit', edit_project_path(project) %> | <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
+		</p>
+		</footer>
+	</article>
 <% end %>
-</table>
 
-<br />
 
 <%= link_to 'New Project', new_project_path %>

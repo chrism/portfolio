@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110831232439) do
+ActiveRecord::Schema.define(:version => 20110904201604) do
+
+  create_table "projectimages", :force => true do |t|
+    t.string   "url"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projectimages", ["project_id"], :name => "index_projectimages_on_project_id"
 
   create_table "projects", :force => true do |t|
     t.string   "title"
