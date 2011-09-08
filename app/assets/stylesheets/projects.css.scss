@@ -7,5 +7,6 @@
 }
 
 .description {
-	color: red;
+	@include position(relative, 0 0 0 20px);
+	color: $blue;
 }

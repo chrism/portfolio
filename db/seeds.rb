@@ -6,17 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
-categories = Category.create([{ name: 'Web'}, { name: 'Mobile'}])
+Project.delete_all
 
 thepigmen = Project.create(title: 'The Pigmen', description: 'blah blah blah')
 thepigmen.projectimages = Projectimage.create([{ url: 'test1.jpg' }, { url: 'test2.jpg' }])
-thepigmen.categories << categories.first
+thepigmen.categories << Category.find_or_create_by_name('Web')
 thepigmen.save
 
 brocoli = Project.create(title: 'Brocoli', description: 'Site for an independent experimental music label based in Paris.')
 brocoli.projectimages = Projectimage.create([{ url: 'test4.jpg' }, { url: 'test5.jpg' }, { url: 'test6.jpg' }])
-brocoli.categories << categories.first
+brocoli.categories << Category.find_or_create_by_name('Web')
 brocoli.save
 
 

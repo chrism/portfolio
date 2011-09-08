@@ -21,3 +21,17 @@ create development database
 installed using homebrew user is same as homebrew installation
 
 createdb chrismasters_development
+
+=Livereload
+
+install the gems like so..
+
+group :development do
+  gem 'rb-fsevent'
+  gem "guard-livereload", "~> 0.3.1"
+  gem "growl_notify"
+end
+
+then
+
+guard start
