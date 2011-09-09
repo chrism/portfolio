@@ -7,6 +7,8 @@ Chrismasters::Application.routes.draw do
   root :to => 'home#index'
 
   resources :projects
+  resources :users
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

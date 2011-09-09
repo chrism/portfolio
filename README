@@ -35,3 +35,25 @@ end
 then
 
 guard start
+
+=Heroku
+
+gem "heroku"
+
+useful commands
+
+heroku pg:reset SHARED_DATABASE
+- use instead of rake db:reset
+
+heroku run rake db:migrate
+- migrate database
+
+heroku logs
+- show log
+
+heroku open
+- open in browser
+
+=Cancan
+
+for authentication
