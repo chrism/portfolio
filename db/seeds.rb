@@ -7,6 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Project.delete_all
+User.delete_all
+
+chris = User.create(email: 'chrismasters@gmail.com', password: 'test')
 
 thepigmen = Project.create(title: 'The Pigmen', description: 'blah blah blah')
 thepigmen.projectimages = Projectimage.create([{ url: 'test1.jpg' }, { url: 'test2.jpg' }])

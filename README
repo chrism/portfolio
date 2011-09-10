@@ -57,3 +57,12 @@ heroku open
 =Cancan
 
 for authentication
+see railscasts
+
+=Feezirra
+
+for feed parsing
+
+http://stackoverflow.com/questions/4071587/feedzirra-in-rails-3
+plus railscasts
+

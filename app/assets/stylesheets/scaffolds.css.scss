@@ -27,8 +27,11 @@ div {
   &.field, &.actions {
     margin-bottom: 10px; } }
 
-#notice {
+#flash_notice {
   color: green; }
+
+#flash_alert {
+  color: red; }
 
 .field_with_errors {
   padding: 2px;

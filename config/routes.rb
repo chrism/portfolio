@@ -8,7 +8,11 @@ Chrismasters::Application.routes.draw do
 
   resources :projects
   resources :users
-  resources :sessions
+  resources :sessions  
+  
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

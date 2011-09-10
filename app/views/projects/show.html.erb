@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b class="title">Title:</b>
   <%= @project.title %>
@@ -10,6 +8,7 @@
   <%= @project.description %>
 </p>
 
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<% if can? :update, Project %>
+	<%= link_to 'Edit', edit_project_path(@project) %> |
+<% end %>
 <%= link_to 'Back', projects_path %>
