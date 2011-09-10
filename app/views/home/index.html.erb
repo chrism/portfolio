@@ -1,21 +1,25 @@
 <h1>About</h1>
 
-<section>
+<h1>Social</h1>
+
+<section id="pinboard">
 	<h3>Pinboard</h3>
 	<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
 	  <article>
-			<h6><%= entry.pubat %></h6>
+			
 			<h4><%= link_to h(entry.title), entry.url %></h4>
+			<h6><%= entry.pubat.to_s(:long_date) %></h6>
 			<p><%= entry.summary %></p>
 		</article>
 	<% end %>
 </section>
-<section>
+<section id="instapaper">
 	<h3>Instapaper</h3>
 	<% for entry in Instapaper.all(:limit => 10, :order => "pubat desc") %>
 	  <article>
-			<h6><%= entry.pubat %></h6>
-			<h4><%= link_to h(entry.title), entry.url %></h4>			
+			
+			<h4><%= link_to h(entry.title), entry.url %></h4>
+			<h6><%= entry.pubat.to_s(:long_date) %></h6>		
 		</article>
 	<% end %>
 </section>

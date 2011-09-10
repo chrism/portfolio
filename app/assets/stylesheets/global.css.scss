@@ -1,1 +1,18 @@
 $blue: #336699;
+
+body {
+	font-family: 'ProximaNova-Regular', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'ProximaNova-Light', serif;
+}
+
+a.view-project {
+	@include border-radius(5px);
+	background-color: #DDDDDD;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+

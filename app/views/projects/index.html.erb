@@ -20,10 +20,11 @@
 				<% end %>
 			</ul>
 		<% end %>
-		<%= link_to 'View project', project %>
+		<%= link_to 'View project', project, :class => "view-project" %>
 		<footer>
 		<p>
 			<% if can? :update, Project %>
+			
 				<%= link_to 'Edit', edit_project_path(project) %>
 			<% end %>
 			<% if can? :destroy, Project %>
