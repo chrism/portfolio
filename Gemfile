@@ -20,6 +20,9 @@ gem "bourbon"
 # for authentication -- should change to clearance at some point?
 gem "cancan"
 
+# for rss feed parsing
+gem "feedzirra"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

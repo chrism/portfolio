@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  summary: MyText
+  url: MyString
+  pubat: 2011-09-10 15:47:48
+
+two:
+  title: MyString
+  summary: MyText
+  url: MyString
+  pubat: 2011-09-10 15:47:48
