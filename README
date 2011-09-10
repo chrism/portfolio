@@ -42,6 +42,9 @@ gem "heroku"
 
 useful commands
 
+git push heroku master
+- push up to heroku
+
 heroku pg:reset SHARED_DATABASE
 - use instead of rake db:reset
 

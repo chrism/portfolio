@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<%= tabs_tag do |tab| %>
-	  <%= tab.home 'Home', root_path %>
-	  <%= tab.project 'Projects', projects_path %>
-	<% end %>
+	<nav>
+		<%= tabs_tag do |tab| %>
+		  <%= tab.home 'Home', root_path %>
+		  <%= tab.project 'Projects', projects_path %>
+		<% end %>
+	</nav>
 	
 	<% if current_user %>
 		Logged in as <%= current_user.email %>.

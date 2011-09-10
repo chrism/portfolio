@@ -5,18 +5,19 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+# for postgres (heroku)
 gem 'pg'
 
 # for navigation
-
 gem "tabs_on_rails"
 
-# for sass mixins
+# for default styling
+gem "flutie"
 
+# for sass mixins
 gem "bourbon"
 
-# for authentication
-
+# for authentication -- should change to clearance at some point?
 gem "cancan"
 
 # Gems used only for assets and not required
