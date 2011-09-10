@@ -1,11 +1,23 @@
 <h1>About</h1>
-<h3>Pinboard</h3>
+
 <section>
-<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
-  <article>
-		<h4><%= link_to h(entry.title), entry.url %></h4>
-		<p><%= entry.pubat %></p>
-		<p><%= entry.summary %></p>
-	</article>
-<% end %>
+	<h3>Pinboard</h3>
+	<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
+	  <article>
+			<h6><%= entry.pubat %></h6>
+			<h4><%= link_to h(entry.title), entry.url %></h4>
+			<p><%= entry.summary %></p>
+		</article>
+	<% end %>
 </section>
+<section>
+	<h3>Instapaper</h3>
+	<% for entry in Instapaper.all(:limit => 10, :order => "pubat desc") %>
+	  <article>
+			<h6><%= entry.pubat %></h6>
+			<h4><%= link_to h(entry.title), entry.url %></h4>			
+		</article>
+	<% end %>
+</section>
+
+
