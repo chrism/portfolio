@@ -45,6 +45,9 @@ useful commands
 git push heroku master
 - push up to heroku
 
+RAILS_ENV=production bundle exec rake assets:precompile
+- precompile assets
+
 heroku pg:reset SHARED_DATABASE
 - use instead of rake db:reset
 
