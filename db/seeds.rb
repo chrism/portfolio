@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Project.delete_all
+Projectimage.delete_all
 User.delete_all
 
 chris = User.create(email: 'chrismasters@gmail.com', password: 'test')
