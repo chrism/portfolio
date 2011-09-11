@@ -14,8 +14,8 @@ chris = User.create(email: 'chrismasters@gmail.com', password: 'test')
 
 xbox = Project.create(title: 'Orange TV on Xbox', description: '<p>Bringing Orange TV services to the Xbox platform</p>', projectformat: 'TV', client: 'Orange')
 xbox.projectimages = Projectimage.create([{ url: 'xbox-tvtwist.png', mainimage: true }, { url: 'xbox-epg-columns.png', mainimage: false }, { url: 'xbox-epg.png', mainimage: false }])
-xbox.categories << Category.find_or_create_by_name('Design')
 xbox.categories << Category.find_or_create_by_name('User Journeys')
+xbox.categories << Category.find_or_create_by_name('Design')
 xbox.categories << Category.find_or_create_by_name('Branding')
 xbox.save
 
@@ -25,6 +25,25 @@ fastdrop.categories << Category.find_or_create_by_name('Design')
 fastdrop.categories << Category.find_or_create_by_name('Client Side Development')
 fastdrop.save
 
+oms_web = Project.create(title: 'Orange Music Store', description: '<p>Updates to the application</p>', projectformat: 'Web', client: 'Orange')
+oms_web.projectimages = Projectimage.create([{ url: 'oms-web-home.png', mainimage: true }])
+oms_web.categories << Category.find_or_create_by_name('User Journeys')
+oms_web.categories << Category.find_or_create_by_name('Design')
+oms_web.categories << Category.find_or_create_by_name('Client Side Development')
+oms_web.save
+
+deezer = Project.create(title: 'Deezer Mobile Application', description: '<p>Updates to the application</p>', projectformat: 'Mobile', client: 'Orange')
+deezer.projectimages = Projectimage.create([{ url: 'deezer-one.png', mainimage: true }, { url: 'deezer-two.png', mainimage: false }, { url: 'deezer-three.png', mainimage: false }])
+deezer.categories << Category.find_or_create_by_name('Design')
+deezer.categories << Category.find_or_create_by_name('Mobile')
+deezer.save
+
+brocoli = Project.create(title: 'Brocoli', description: '<p>Site for an independent experimental music label based in Paris.</p>', projectformat: 'Web', client: 'Record Label')
+brocoli.projectimages = Projectimage.create([{ url: 'brocoli-home.png', mainimage: true }])
+brocoli.categories << Category.find_or_create_by_name('Design')
+brocoli.categories << Category.find_or_create_by_name('Client Side Development')
+brocoli.save
+
 thepigmen = Project.create(title: 'The Pigmen', projectformat: 'Web', client: 'Personal',
                             description: '<p>This project was conceived as a response to the build up of the financial crisis and the way in which the media portrayed events.</p><p>The idea was to change the focus <strong>away from institutions and anonymous organisations back to individuals</strong> and try to encourage personal responsibility for their actions</p>'
                           )
@@ -33,11 +52,5 @@ thepigmen.categories << Category.find_or_create_by_name('Concept')
 thepigmen.categories << Category.find_or_create_by_name('Design')
 thepigmen.categories << Category.find_or_create_by_name('Development')
 thepigmen.save
-
-brocoli = Project.create(title: 'Brocoli', description: '<p>Site for an independent experimental music label based in Paris.</p>', projectformat: 'Web', client: 'Record Label')
-brocoli.projectimages = Projectimage.create([{ url: 'brocoli-home.png', mainimage: true }])
-brocoli.categories << Category.find_or_create_by_name('Design')
-brocoli.categories << Category.find_or_create_by_name('Client Side Development')
-brocoli.save
 
 
