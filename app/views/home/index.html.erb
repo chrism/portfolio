@@ -1,7 +1,34 @@
 <h1 class="main-heading">Chris Masters</h1>
+<div id="example-projects">
+	<div id="web-tint"><%= image_tag "web-tint.png" %></div>
+	<div class="flexslider">
+	  <ul class="slides">
+	    <li>
+				<%= image_tag "flexslider-1.png" %>
+	    </li>
+	    <li>
+				<%= image_tag "flexslider-2.png" %>
+	    </li>
+	  </ul>
+	</div>
+</div>
 
-<h1 class="main-heading">Social</h1>
+<section id="about-me" class="clearfix">
+	<div class="intro"><p>I&#8217;m a formally educated <strong>interaction</strong> &amp; <strong>visual designer</strong> with over ten years experience and a strong belief in user-centred methodologies</p></div>
+	<div class="description"><p>I work for <strong>Orange</strong> and during the past twelve years working in the industry have <strong>designed products &amp; services</strong> for <strong>major brands</strong>.</p><a href="#" title="Test Link">link goes here &rarr;</a></div>
+	<div id="work-examples" class="teaser">
+		<h2 class="main-heading">Examples of work</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<%= link_to 'View projects', projects_path, :class => "view-project" %>	
+	</div>
+	<div id="work-history" class="teaser">
+		<h2 class="main-heading">Work history</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<%= link_to 'View more', projects_path, :class => "view-project" %>	
+	</div>
+</section>
 <section id="social-links" class="clearfix">
+	<h2 class="main-heading">Social</h1>
 	<section id="pinboard">
 		<header>
 			<h2>Recently Bookmarked</h2>

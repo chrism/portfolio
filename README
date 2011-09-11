@@ -54,6 +54,9 @@ heroku pg:reset SHARED_DATABASE
 heroku run rake db:migrate
 - migrate database
 
+heroku run rake cron
+- run cron
+
 heroku logs
 - show log
 

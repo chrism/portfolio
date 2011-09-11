@@ -27,5 +27,10 @@ brocoli.categories << Category.find_or_create_by_name('Design')
 brocoli.categories << Category.find_or_create_by_name('Client Side Development')
 brocoli.save
 
+fastdrop = Project.create(title: 'Fastdrop', description: 'Stuff about fastdrop', projectformat: 'Web', client: 'Software As A Service')
+fastdrop.projectimages = Projectimage.create([{ url: 'test4.png' }])
+fastdrop.categories << Category.find_or_create_by_name('Design')
+fastdrop.categories << Category.find_or_create_by_name('Client Side Development')
+fastdrop.save
 
 

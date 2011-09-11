@@ -36,8 +36,14 @@ div#content-wrapper {
 	background-color: #ededed;
 }
 
+div#content-wrapper.home {
+	background-image:url("home-bg.png");
+	background-repeat: no-repeat;
+}
+
 div#header-wrapper {
 	position:fixed;
+	z-index: 1000;
 	display:block;
 	width: 100%;
 	background-color: $mid_grey;
@@ -45,7 +51,6 @@ div#header-wrapper {
 
 header#main-header {
 	/*@include grid-overlay;*/
-	
 	max-width: 1225px;
 	margin: 0 auto;
 	background-color: $dark_grey;
@@ -58,8 +63,11 @@ header#main-header {
 			padding: 0;
 			font: 18px 'ProximaNova-Semibold', serif;
 			text-transform: uppercase;
-			text-shadow: #464646 0px 1px 1px;
+			text-shadow: #000000 0px 1px 1px;
+			color: #ffffff;
+			
 			a {
+				text-shadow: #464646 0px 1px 1px;
 				text-decoration: none;
 				color: #151515;
 			}
@@ -108,13 +116,69 @@ h1.main-heading{
 	text-transform: uppercase;
 }
 
+h2.main-heading {
+	padding: 60px 0 60px $standard_margin;
+	font-family: 'ProximaNova-Semibold', serif;
+	text-transform: uppercase;
+}
+
 strong {
 	font-family: 'ProximaNova-Bold', serif;
-	color: $mid_grey;
 }
 
 footer#global {
 	border-top: 1px solid $lightest_grey;
 	padding: $standard_margin 0;
 	margin: $standard_margin $standard_margin 0 $standard_margin;
+}
+
+#about-me {
+	float: right;
+	width: 755px + $standard_margin;
+	
+	.intro {
+		padding: $standard_margin;
+		font-family: 'ProximaNova-Light', serif;
+		background: rgba(255,255,255,0.7);
+		p {
+			font-size: 36px;
+			color: $mid_grey;
+		}
+	}
+	.description {
+		display: none;
+	}
+	.teaser {
+		float: left;
+		width: 359px;
+		h2.main-heading {
+			font-family: 'ProximaNova-Light', serif;
+			margin-top: $standard_margin;
+			padding: 0;
+		}
+		p {
+			padding: 20px 0;
+		}
+	}
+	#work-history {
+		padding-left: $standard_margin;
+	}
+}
+
+#example-projects {
+	position: relative;
+	padding-top:32px;
+	float: left;
+	width: 396px;
+	#web-tint {
+		z-index: 10;
+		position:absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+#social-links {
+	padding-top: 120px;
+	clear: left;
 }

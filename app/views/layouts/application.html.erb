@@ -5,13 +5,19 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+	<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.flexslider').flexslider();
+	  });
+	</script>
 </head>
 <body>
 	<div id="header-wrapper">
 		<header id="main-header" class="clearfix">
 			<div id="login">
 				<% if current_user %>
-					<p>Logged in as <%= current_user.email %>. <%= link_to "Log out", log_out_path %></p>
+					<p>Logged in. <%= link_to "Log out", log_out_path %></p>
 				<% else %>
 				  <!-- <%= link_to "Sign up", sign_up_path %> or -->
 			    <p><%= link_to "Log In", log_in_path %></p>
@@ -27,7 +33,7 @@
 		</header>
 	</div>
 	
-	<div id="content-wrapper">
+	<div id="content-wrapper" class="<%= current_tab %>">
 		<% flash.each do |name, msg| %>
 		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 		<% end %>
@@ -38,7 +44,7 @@
 		<%= yield %>
 		
 		<footer id="global">
-			<h6>Site built with <%= link_to_function "Ruby On Rails 3.1", "http://rubyonrails.org/" %> and hosted on <%= link_to "Heroku", "http://www.heroku.com/" %>
+			<h6>Site built with <%= link_to "Ruby On Rails 3.1", "http://rubyonrails.org/" %> and hosted on <%= link_to "Heroku", "http://www.heroku.com/" %>
 			</h6>
 		</footer>
 	</div>

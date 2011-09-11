@@ -27,6 +27,9 @@ section#projects article {
 		}
 		p {			
 			color: #545454;
+			strong {
+				color: $dark_grey;
+			}
 		}
 	}
 }
