@@ -44,6 +44,21 @@ brocoli.categories << Category.find_or_create_by_name('Design')
 brocoli.categories << Category.find_or_create_by_name('Client Side Development')
 brocoli.save
 
+nma = Project.create(title: 'Mobile Music Application', description: '<p>A simple music service built for lower-end devices</p>', projectformat: 'Mobile', client: 'Orange')
+nma.projectimages = Projectimage.create([{ url: 'nma-first.png', mainimage: true }])
+nma.categories << Category.find_or_create_by_name('Design')
+nma.categories << Category.find_or_create_by_name('Mobile')
+nma.categories << Category.find_or_create_by_name('User Journeys')
+nma.save
+
+player = Project.create(title: 'Orange Player', description: '<p>A simple application for using your mobile as a music player</p>', projectformat: 'Mobile', client: 'Orange')
+player.projectimages = Projectimage.create([{ url: 'orange-player-first.png', mainimage: true }])
+player.categories << Category.find_or_create_by_name('Design')
+player.categories << Category.find_or_create_by_name('Mobile')
+player.categories << Category.find_or_create_by_name('User Journeys')
+player.categories << Category.find_or_create_by_name('Application Development')
+player.save
+
 thepigmen = Project.create(title: 'The Pigmen', projectformat: 'Web', client: 'Personal',
                             description: '<p>This project was conceived as a response to the build up of the financial crisis and the way in which the media portrayed events.</p><p>The idea was to change the focus <strong>away from institutions and anonymous organisations back to individuals</strong> and try to encourage personal responsibility for their actions</p>'
                           )
