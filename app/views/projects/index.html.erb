@@ -6,8 +6,12 @@
 	<% @projects.each do |project| %>
 		<article class="clearfix">
 			<div class="<%= project.projectformat %> images">
-				<% if project.projectimages %>	
-					<%= image_tag project.projectimages.first.url %>
+				<% if project.projectimages %>
+					<% project.projectimages.each do |projectimage| %>
+						<% if projectimage.mainimage %>
+				    	<%= image_tag projectimage.url %>
+						<% end %>
+					<% end %>
 				<% end %>
 			</div>
 			<div class="details">
