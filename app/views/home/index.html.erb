@@ -1,4 +1,6 @@
-<h1 class="main-heading">Chris Masters</h1>
+<header id="page-header">
+	<h1 class="main-heading">Chris Masters</h1>
+</header>
 <div id="example-projects">
 	<div id="web-tint"><%= image_tag "web-tint.png" %></div>
 	<div class="flexslider">
@@ -13,7 +15,7 @@
 	</div>
 </div>
 
-<section id="about-me" class="clearfix">
+<section id="about-me-intro" class="clearfix">
 	<div class="intro"><p>I&#8217;m a formally educated <strong>interaction</strong> &amp; <strong>visual designer</strong> with over ten years experience and a strong belief in user-centred methodologies</p></div>
 	<div class="description"><p>I work for <strong>Orange</strong> and during the past twelve years working in the industry have <strong>designed products &amp; services</strong> for <strong>major brands</strong>.</p><a href="#" title="Test Link">link goes here &rarr;</a></div>
 	<div id="work-examples" class="teaser">
@@ -24,12 +26,12 @@
 	<div id="work-history" class="teaser">
 		<h2 class="main-heading">Work history</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-		<%= link_to 'View more', projects_path, :class => "view-project" %>	
+		<%= link_to 'View more', about_path, :class => "view-project" %>	
 	</div>
 </section>
 <section id="social-links" class="clearfix">
 	<h2 class="main-heading">Social</h1>
-	<section id="pinboard">
+	<section id="pinboard" class="column-list">
 		<header>
 			<h2>Recently Bookmarked</h2>
 			<h5>via <%= link_to "Pinboard", "https://pinboard.in/u:chrismasters/public/" %></h5>
@@ -42,7 +44,7 @@
 			</article>
 		<% end %>
 	</section>
-	<section id="instapaper">
+	<section id="instapaper" class="column-list">
 		<header>
 			<h2>Recently Read</h2>
 			<h5>via <%= link_to "Instapaper", "http://www.instapaper.com/" %></h5>

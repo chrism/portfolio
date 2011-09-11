@@ -110,8 +110,10 @@ nav#main-nav {
 	}
 }
 
-h1.main-heading{
+header#page-header {
 	padding: 140px 0 60px $standard_margin;
+}
+h1.main-heading{
 	font-family: 'ProximaNova-Semibold', serif;
 	text-transform: uppercase;
 }
@@ -124,6 +126,7 @@ h2.main-heading {
 
 strong {
 	font-family: 'ProximaNova-Bold', serif;
+	font-weight: normal;
 }
 
 footer#global {
@@ -132,53 +135,8 @@ footer#global {
 	margin: $standard_margin $standard_margin 0 $standard_margin;
 }
 
-#about-me {
-	float: right;
-	width: 755px + $standard_margin;
-	
-	.intro {
-		padding: $standard_margin;
-		font-family: 'ProximaNova-Light', serif;
-		background: rgba(255,255,255,0.7);
-		p {
-			font-size: 36px;
-			color: $mid_grey;
-		}
-	}
-	.description {
-		display: none;
-	}
-	.teaser {
-		float: left;
-		width: 359px;
-		h2.main-heading {
-			font-family: 'ProximaNova-Light', serif;
-			margin-top: $standard_margin;
-			padding: 0;
-		}
-		p {
-			padding: 20px 0;
-		}
-	}
-	#work-history {
-		padding-left: $standard_margin;
-	}
-}
-
-#example-projects {
-	position: relative;
-	padding-top:32px;
+section.column-list {
 	float: left;
-	width: 396px;
-	#web-tint {
-		z-index: 10;
-		position:absolute;
-		top: 0;
-		right: 0;
-	}
-}
-
-#social-links {
-	padding-top: 120px;
-	clear: left;
+	margin-left: $standard_margin;
+	width: 359px;
 }

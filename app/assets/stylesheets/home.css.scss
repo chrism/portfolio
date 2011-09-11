@@ -2,6 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#about-me-intro {
+	float: right;
+	width: 755px + $standard_margin;
+	
+	.intro {
+		padding: $standard_margin;
+		font-family: 'ProximaNova-Light', serif;
+		background: rgba(255,255,255,0.7);
+		p {
+			font-size: 36px;
+			color: $mid_grey;
+		}
+	}
+	.description {
+		display: none;
+	}
+	.teaser {
+		float: left;
+		width: 359px;
+		h2.main-heading {
+			font-family: 'ProximaNova-Light', serif;
+			margin-top: $standard_margin;
+			padding: 0;
+		}
+		p {
+			padding: 20px 0;
+		}
+	}
+	#work-history {
+		padding-left: $standard_margin;
+	}
+}
+
+#example-projects {
+	position: relative;
+	padding-top:32px;
+	float: left;
+	width: 396px;
+	#web-tint {
+		z-index: 10;
+		position:absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+#social-links {
+	padding-top: 120px;
+	clear: left;
+}
+
 section#social-links header {
 	padding-bottom: 10px;
 	border-bottom: 1px solid $lightest_grey;
@@ -9,12 +60,6 @@ section#social-links header {
 	h2 {
 		text-transform: uppercase;
 	}
-}
-
-section#pinboard, section#instapaper {
-	float: left;
-	margin-left: $standard_margin;
-	width: 359px;
 }
 
 section#instapaper article {

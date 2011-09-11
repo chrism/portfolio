@@ -1,4 +1,7 @@
 Chrismasters::Application.routes.draw do
+  # get "pages/about"
+  match 'about' => 'pages#about', :as => :about
+
   get "home/index"
   
   # You can have the root of your site routed with "root"

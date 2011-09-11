@@ -1,9 +1,11 @@
-<h1 class="main-heading">Recent Projects</h1>
+<header id="page-header">
+	<h1 class="main-heading">Recent Projects</h1>	
+</header>
 
 <section id="projects">
 	<% @projects.each do |project| %>
 		<article class="clearfix">
-			<div class="images">
+			<div class="<%= project.projectformat %> images">
 				<% if project.projectimages %>	
 					<%= image_tag project.projectimages.first.url %>
 				<% end %>

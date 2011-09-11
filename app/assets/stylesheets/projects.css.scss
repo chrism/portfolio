@@ -2,18 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-section#projects article {
-		margin: 0 $standard_margin;
-		padding: 0 0 $standard_margin 0;
-		/*border-top: 1px solid $lightest_grey;*/
+section#projects article, article#project {
+	margin: 0 $standard_margin;
+	padding: 0 0 $standard_margin 0;
+	/*border-top: 1px solid $lightest_grey;*/
 	div.images {
-		margin-right: $standard_margin;
-		width: 755px;
-		float: left;
-		ul {
-			list-style: none;
+			margin-right: $standard_margin;
+			width: 755px;
+			float: left;
+			ul {
+				list-style: none;
+				li {
+					margin-bottom: $standard_margin;
+				}
+			}
 		}
-	}
 	div.details {		
 		overflow: hidden;
 		padding-bottom: 30px;
@@ -32,4 +35,12 @@ section#projects article {
 			}
 		}
 	}
+}
+
+article#project p{
+	font-size: 16px;
+}
+
+article div.TV {
+	padding-bottom: $standard_margin;
 }
