@@ -2,10 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.title {
-	color: green;
-}
-
-.description {
-	color: $blue;
+section#projects article {
+		margin: 0 $standard_margin;
+		padding: 0 0 $standard_margin 0;
+		/*border-top: 1px solid $lightest_grey;*/
+	div.images {
+		margin-right: $standard_margin;
+		width: 755px;
+		float: left;
+		ul {
+			list-style: none;
+		}
+	}
+	div.details {		
+		overflow: hidden;
+		padding-bottom: 30px;
+		header {
+			padding-bottom: 10px;
+			border-bottom: 1px solid $lightest_grey;
+			margin-bottom: 20px;
+			h2 {
+				text-transform: uppercase;
+			}
+		}
+		p {			
+			color: #545454;
+		}
+	}
 }

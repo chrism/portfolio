@@ -1,27 +1,33 @@
-<h1>About</h1>
+<h1 class="main-heading">Chris Masters</h1>
 
-<h1>Social</h1>
+<h1 class="main-heading">Social</h1>
+<section id="social-links" class="clearfix">
+	<section id="pinboard">
+		<header>
+			<h2>Recently Bookmarked</h2>
+			<h5>via <%= link_to "Pinboard", "https://pinboard.in/u:chrismasters/public/" %></h5>
+		</header>	
+		<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
+		  <article>			
+				<h4><%= link_to h(entry.title), entry.url %></h4>
+				<h6><%= entry.pubat.to_s(:long_date) %></h6>
+				<p><%= entry.summary %></p>
+			</article>
+		<% end %>
+	</section>
+	<section id="instapaper">
+		<header>
+			<h2>Recently Read</h2>
+			<h5>via <%= link_to "Instapaper", "http://www.instapaper.com/" %></h5>
+		</header>
+		<% for entry in Instapaper.all(:limit => 10, :order => "pubat desc") %>
+		  <article>
+				<h4><%= link_to h(entry.title), entry.url %></h4>
+				<h6><%= entry.pubat.to_s(:long_date) %></h6>		
+			</article>
+		<% end %>
+	</section>
+</section>
 
-<section id="pinboard">
-	<h3>Pinboard</h3>
-	<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
-	  <article>
-			
-			<h4><%= link_to h(entry.title), entry.url %></h4>
-			<h6><%= entry.pubat.to_s(:long_date) %></h6>
-			<p><%= entry.summary %></p>
-		</article>
-	<% end %>
-</section>
-<section id="instapaper">
-	<h3>Instapaper</h3>
-	<% for entry in Instapaper.all(:limit => 10, :order => "pubat desc") %>
-	  <article>
-			
-			<h4><%= link_to h(entry.title), entry.url %></h4>
-			<h6><%= entry.pubat.to_s(:long_date) %></h6>		
-		</article>
-	<% end %>
-</section>
 
 

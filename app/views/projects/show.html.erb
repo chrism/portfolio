@@ -1,8 +1,13 @@
-<p>
-  <b class="title">Title:</b>
-  <%= @project.title %>
-</p>
-
+<h1 class="main-heading"><%= @project.title %></h1>
+<div class="images">
+	<% if @project.projectimages %>		
+		<ul>
+			<% @project.projectimages.each do |projectimage| %>
+		    <li><%= image_tag projectimage.url %></li>
+			<% end %>
+		</ul>
+	<% end %>
+</div>
 <p>
   <b class="description">Descqsqsronsssss:</b>
   <%= @project.description %>

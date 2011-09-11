@@ -1,7 +1,19 @@
-$blue: #336699;
+$standard_margin: 37px;
+$lightest_grey: #dddddd;
+$dark_grey: #2d2d2d;
+$mid_grey: #444444;
+$light_grey: #AAAAAA;
+
+
+@mixin grid-overlay {
+	background-image:url("grid-overlay.png");
+	background-repeat: repeat-y;
+	background-position: top center;
+}
 
 body {
 	font-family: 'ProximaNova-Regular', serif;
+	background-color: $lightest_grey;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -10,9 +22,99 @@ h1,h2,h3,h4,h5,h6 {
 
 a.view-project {
 	@include border-radius(5px);
-	background-color: #DDDDDD;
+	background-color: $light_grey;
 	color: #FFFFFF;
 	text-decoration: none;
 	padding: 5px 10px;
 }
 
+div#content-wrapper {
+	/*@include grid-overlay;*/
+		
+	margin: 0 auto;
+	max-width: 1225px;
+	background-color: #ededed;
+}
+
+div#header-wrapper {
+	position:fixed;
+	display:block;
+	width: 100%;
+	background-color: $mid_grey;
+}
+
+header#main-header {
+	/*@include grid-overlay;*/
+	
+	max-width: 1225px;
+	margin: 0 auto;
+	background-color: $dark_grey;
+	#login {
+		float:left;
+		display: block;
+		margin: 25px 0 0 $standard_margin;
+		p {
+			margin: 0;
+			padding: 0;
+			font: 18px 'ProximaNova-Semibold', serif;
+			text-transform: uppercase;
+			text-shadow: #464646 0px 1px 1px;
+			a {
+				text-decoration: none;
+				color: #151515;
+			}
+		}
+	}
+}
+
+nav#main-nav {
+	float:right;
+	ul {
+		margin-top: 25px;
+		margin-right: $standard_margin;
+		li {
+			padding-bottom: 22px;
+			display: block;
+			float: left;
+			font: 18px 'ProximaNova-Semibold', serif;
+			text-transform: uppercase;
+			text-shadow: #000000 0px 1px 1px;
+			color: #ffffff;
+			a {
+				text-decoration: none;
+				color: #bbbbbb;
+			}
+		}
+		li.current {
+			background-image:url("arrow-light-grey.png");
+			background-repeat: no-repeat;
+			background-position: bottom center;
+		}
+		li#about {
+			margin-right: 18px;
+		}
+		li#projects {
+			margin-right: 56px;
+		}
+		li#home {
+			margin-right: 62px;
+		}
+	}
+}
+
+h1.main-heading{
+	padding: 140px 0 60px $standard_margin;
+	font-family: 'ProximaNova-Semibold', serif;
+	text-transform: uppercase;
+}
+
+strong {
+	font-family: 'ProximaNova-Bold', serif;
+	color: $mid_grey;
+}
+
+footer#global {
+	border-top: 1px solid $lightest_grey;
+	padding: $standard_margin 0;
+	margin: $standard_margin $standard_margin 0 $standard_margin;
+}

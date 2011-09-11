@@ -1,39 +1,44 @@
-<h1>Listing projects</h1>
+<h1 class="main-heading">Recent Projects</h1>
 
-<% @projects.each do |project| %>
-	<article>
-		<h2><%= project.title %></h2>
-		<% if project.projectimages %>		
-			<ul>
-				<% project.categories.each do |category| %>
-			    <li><%= category.name %></li>
+<section id="projects">
+	<% @projects.each do |project| %>
+		<article class="clearfix">
+			<div class="images">
+				<% if project.projectimages %>	
+					<%= image_tag project.projectimages.first.url %>
 				<% end %>
-			</ul>
-		<% end %>
-		<p>
-			<%= project.description %>
-		</p>
-		<% if project.projectimages %>		
-			<ul>
-				<% project.projectimages.each do |projectimage| %>
-			    <li><%= projectimage.url %></li>
+			</div>
+			<div class="details">
+				<header>
+					<h2><%= project.title %></h2>
+					<h6><%= project.projectformat %> / <%= project.client %></h6>				
+				</header>
+				<p>
+					<%= project.description.html_safe %>
+				</p>
+				<% if project.categories %>		
+					<ul>
+						<% project.categories.each do |category| %>
+					    <li><%= category.name %></li>
+						<% end %>
+					</ul>
 				<% end %>
-			</ul>
-		<% end %>
-		<%= link_to 'View project', project, :class => "view-project" %>
-		<footer>
-		<p>
-			<% if can? :update, Project %>
-			
-				<%= link_to 'Edit', edit_project_path(project) %>
-			<% end %>
-			<% if can? :destroy, Project %>
-				| <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
-			<% end %>
-		</p>
-		</footer>
-	</article>
-<% end %>
+				<%= link_to 'View project', project, :class => "view-project" %>
+			</div>			
+			<footer>
+			<p>
+				<% if can? :update, Project %>
+
+					<%= link_to 'Edit', edit_project_path(project) %>
+				<% end %>
+				<% if can? :destroy, Project %>
+					| <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
+				<% end %>
+			</p>
+			</footer>
+		</article>
+	<% end %>	
+</section>
 
 <% if can? :create, Project %>
   <%= link_to "New Project", new_project_path %>

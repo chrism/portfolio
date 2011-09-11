@@ -11,14 +11,19 @@ User.delete_all
 
 chris = User.create(email: 'chrismasters@gmail.com', password: 'test')
 
-thepigmen = Project.create(title: 'The Pigmen', description: 'blah blah blah')
-thepigmen.projectimages = Projectimage.create([{ url: 'test1.jpg' }, { url: 'test2.jpg' }])
-thepigmen.categories << Category.find_or_create_by_name('Web')
+thepigmen = Project.create(title: 'The Pigmen', projectformat: 'Web', client: 'Personal',
+                            description: '<p>This project was conceived as a response to the build up of the financial crisis and the way in which the media portrayed events.</p><p>The idea was to change the focus <strong>away from institutions and anonymous organisations back to individuals</strong> and try to encourage personal responsibility for their actions</p>'
+                          )
+thepigmen.projectimages = Projectimage.create([{ url: 'test1.png' }, { url: 'test2.jpg' }])
+thepigmen.categories << Category.find_or_create_by_name('Concept')
+thepigmen.categories << Category.find_or_create_by_name('Design')
+thepigmen.categories << Category.find_or_create_by_name('Development')
 thepigmen.save
 
-brocoli = Project.create(title: 'Brocoli', description: 'Site for an independent experimental music label based in Paris.')
-brocoli.projectimages = Projectimage.create([{ url: 'test4.jpg' }, { url: 'test5.jpg' }, { url: 'test6.jpg' }])
-brocoli.categories << Category.find_or_create_by_name('Web')
+brocoli = Project.create(title: 'Brocoli', description: 'Site for an independent experimental music label based in Paris.', projectformat: 'Web', client: 'Record Label')
+brocoli.projectimages = Projectimage.create([{ url: 'test4.png' }, { url: 'test5.jpg' }, { url: 'test6.jpg' }])
+brocoli.categories << Category.find_or_create_by_name('Design')
+brocoli.categories << Category.find_or_create_by_name('Client Side Development')
 brocoli.save
 
 

@@ -7,28 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav>
-		<%= tabs_tag do |tab| %>
-		  <%= tab.home 'Home', root_path %>
-		  <%= tab.project 'Projects', projects_path %>
+	<div id="header-wrapper">
+		<header id="main-header" class="clearfix">
+			<div id="login">
+				<% if current_user %>
+					<p>Logged in as <%= current_user.email %>. <%= link_to "Log out", log_out_path %></p>
+				<% else %>
+				  <!-- <%= link_to "Sign up", sign_up_path %> or -->
+			    <p><%= link_to "Log In", log_in_path %></p>
+				<% end %>
+			</div>
+			<nav id="main-nav">
+				<%= tabs_tag do |tab| %>
+				  <%= tab.home 'Home', root_path, :id => 'home' %>
+				  <%= tab.project 'Projects', projects_path, :id => 'projects' %>
+					<%= tab.about 'About', projects_path, :id => 'about' %>
+				<% end %>
+			</nav>
+		</header>
+	</div>
+	
+	<div id="content-wrapper">
+		<% flash.each do |name, msg| %>
+		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 		<% end %>
-	</nav>
-	
-	<% if current_user %>
-		Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", log_out_path %>
-	<% else %>
-	  <!-- <%= link_to "Sign up", sign_up_path %> or -->
-    <%= link_to "Log In", log_in_path %>
-	<% end %>
-	
-	<% flash.each do |name, msg| %>
-	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	<% end %>
-	
-	<!-- this is application stuff ^ -->
 
-	<%= yield %>
 
+		<!-- this is application stuff ^ -->
+
+		<%= yield %>
+		
+		<footer id="global">
+			<h6>Site built with <%= link_to_function "Ruby On Rails 3.1", "http://rubyonrails.org/" %> and hosted on <%= link_to "Heroku", "http://www.heroku.com/" %>
+			</h6>
+		</footer>
+	</div>
 </body>
 </html>
