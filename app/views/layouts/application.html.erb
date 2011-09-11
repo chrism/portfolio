@@ -31,6 +31,18 @@
 				<% end %>
 			</nav>
 		</header>
+		<% if current_tab.to_s == "project" %>
+		<% @projects = Project.all %>
+		<header id="sub-header">			
+			<nav class="clearfix">				
+				<ul>
+					<% @projects.each do |project| %>
+					<li><%= link_to project.title, project_path(project) %></li>
+					<% end %>
+				</ul>			
+			</nav>
+		</header>
+		<% end %>
 	</div>
 	
 	<div id="content-wrapper" class="<%= current_tab %>">

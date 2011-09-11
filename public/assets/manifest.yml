@@ -1,5 +1,6 @@
 --- 
 arrow-light-grey.png: arrow-light-grey-e18de73e87be65945b41e74db5b45482.png
+arrow-mid-grey.png: arrow-mid-grey-73dc769aefa5a8845c319069566c1e69.png
 brocoli-home.png: brocoli-home-318df54cbf29ee2695648cca9b293514.png
 fastdrop-features.png: fastdrop-features-a6daa84fc383e371e36ae6d908a926a9.png
 fastdrop-home.png: fastdrop-home-d59cb7a7cd4a95eeddb0e66679eb99e8.png
@@ -104,4 +105,4 @@ webfonts/woff/style_148550.woff: webfonts/woff/style_148550-a9bfd647b594dfe8d38f
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2668c24c8b5789cc026320de10e0b572.js
-application.css: application-40a6fad9968db476bd4775fd8d4fcf38.css
+application.css: application-43f00351f4b10f8004dc0f4d6691836c.css

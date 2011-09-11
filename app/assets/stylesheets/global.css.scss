@@ -104,15 +104,47 @@ nav#main-nav {
 		li#projects {
 			margin-right: 56px;
 		}
+		li#projects.current {
+			background-image:url("arrow-mid-grey.png");
+		}
 		li#home {
 			margin-right: 62px;
 		}
 	}
 }
 
+header#sub-header {
+	/*@include grid-overlay;*/
+	max-width: 1225px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: $light_grey;
+	ul {
+		margin: 0;
+		float: right;	
+		li {
+			float: left;
+			margin-right: $standard_margin;
+			font-family: 'ProximaNova-Semibold', serif;
+			font-size: 13px;
+			padding: 12px 0;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
 header#page-header {
 	padding: 140px 0 60px $standard_margin;
 }
+
+header#page-header.projects {
+	padding: 185px 0 60px $standard_margin;
+}
+
 h1.main-heading{
 	font-family: 'ProximaNova-Semibold', serif;
 	text-transform: uppercase;
