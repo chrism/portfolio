@@ -45,26 +45,44 @@
 	<h2 class="main-heading">Social</h2>
 	<section id="pinboard" class="column-list">
 		<header>
-			<h2>Recently Bookmarked</h2>
+			<h2>Bookmarks</h2>
 			<h5>via <%= link_to "Pinboard", "https://pinboard.in/u:chrismasters/public/" %></h5>
 		</header>	
 		<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
 		  <article>			
-				<h4><%= link_to h(entry.title), entry.url %></h4>				
-				<p><%= entry.summary %></p>
+				<h4><%= link_to h(entry.title.html_safe), entry.url %></h4>				
+				<p><%= entry.summary.html_safe %></p>
 				<h6><%= entry.pubat.to_s(:long_date) %></h6>
 			</article>
 		<% end %>
 	</section>
 	<section id="instapaper" class="column-list">
 		<header>
-			<h2>Recently Read</h2>
+			<h2>Reading</h2>
 			<h5>via <%= link_to "Instapaper", "http://www.instapaper.com/" %></h5>
 		</header>
 		<% for entry in Instapaper.all(:limit => 10, :order => "pubat desc") %>
 		  <article>
-				<h4><%= link_to h(entry.title), entry.url %></h4>
+				<h4><%= link_to h(entry.title.html_safe), entry.url %></h4>
 				<h6><%= entry.pubat.to_s(:long_date) %></h6>		
+			</article>
+		<% end %>
+	</section>
+	<section id="lastfm" class="column-list">
+		<header>
+			<h2>Listening</h2>
+			<h5>via <%= link_to "Last.fm", "http://www.last.fm/user/chris_masters" %></h5>
+		</header>	
+		<% for entry in Lastfm.limit(5).order("played_at DESC") %>
+		  <article>
+				<%= image_tag(entry.image_url) %> 
+				<h4><%= link_to h(entry.name.html_safe), entry.url %></h4>				
+				<p><%= entry.artist.html_safe %></p>
+				<% if entry.played_at.blank? %>
+					<h6>Just now</h6>
+					<% else %>
+					  <h6><%= entry.played_at.to_s(:long_date) %></h6>
+				<% end %>				
 			</article>
 		<% end %>
 	</section>

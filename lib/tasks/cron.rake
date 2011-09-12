@@ -5,4 +5,7 @@ task :cron => :environment do
   puts "Pulling new instapaper bookmarks..."
   Instapaper.update_from_feed("http://www.instapaper.com/folder/921432/rss/864125/xFsbXEChScCvrSWE3QNnDQVrVw")
   puts "done instapaper."
+  puts "Pulling new last.fm details..."
+  Lastfm.update_from_api
+  puts "done last.fm."
 end

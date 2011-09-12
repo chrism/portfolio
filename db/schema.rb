@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110912095314) do
+ActiveRecord::Schema.define(:version => 20110912152005) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(:version => 20110912095314) do
     t.datetime "pubat"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "lastfms", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "artist"
+    t.string   "name"
+    t.string   "url"
+    t.string   "album"
+    t.datetime "played_at"
+    t.string   "image_url"
   end
 
   create_table "pinboards", :force => true do |t|
