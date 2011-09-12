@@ -9,10 +9,11 @@
 	.intro {
 		padding: $standard_margin;
 		font-family: 'ProximaNova-Light', serif;
+		@include border-radius(20px 0 0 20px);
 		background: rgba(255,255,255,0.7);
 		p {
 			font-size: 36px;
-			color: $mid_grey;
+			color: black;
 		}
 	}
 	.description {
@@ -53,15 +54,31 @@
 	clear: left;
 }
 
-section#social-links header {
-	padding-bottom: 10px;
-	border-bottom: 1px solid $lightest_grey;
-	margin-bottom: 20px;
-	h2 {
-		text-transform: uppercase;
+section#social-links {
+	header {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $lightest_grey;
+		margin-bottom: 20px;
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+	a {
+		color: black;
+		font-family: 'ProximaNova-Semibold', serif;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	h6 {
+		color: $light_grey;
+	}
+	p {
+		margin-bottom: 5px;
 	}
 }
 
-section#instapaper article {
+section#social-links article {
 	padding-bottom: 15px;
 }

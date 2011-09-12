@@ -23,6 +23,9 @@ gem "cancan"
 # for rss feed parsing
 gem "feedzirra"
 
+# for last.fm api
+gem "rockstar", "~> 0.6.3"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

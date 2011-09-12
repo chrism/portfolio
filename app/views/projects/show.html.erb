@@ -1,5 +1,5 @@
 <header id="page-header" class="projects">
-	<h1 class="main-heading"><%= @project.title %></h1>
+	<h1 class="main-heading"><%= link_to 'Recent Projects'.html_safe, projects_path, :id => "project-title" %> / <%= @project.title %></h1>
 </header>
 <article id="project" class="clearfix">
 	<div class="<%= @project.projectformat %> images">
@@ -13,11 +13,19 @@
 	</div>
 	<div class="details">
 	  <%= @project.description.html_safe %>
-		<h3><%= link_to '&larr; Back to projects'.html_safe, projects_path %></h3>
+		<% if @project.categories %>		
+			<ul>
+				<% @project.categories.each do |category| %>
+			    <li><%= category.name %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</div>
+	<footer>
+		<%= link_to '&larr; Back to projects'.html_safe, projects_path, :class => "view-project" %>
 		<% if can? :update, Project %>
 			<%= link_to 'Edit', edit_project_path(@project) %> |
 		<% end %>
-		
-	</div>	
+	</footer>	
 </article>
 

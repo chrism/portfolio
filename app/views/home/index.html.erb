@@ -5,6 +5,18 @@
 	<div id="web-tint"><%= image_tag "web-tint.png" %></div>
 	<div class="flexslider">
 	  <ul class="slides">
+		  <li>
+				<%= image_tag "flexslider-3.png" %>
+	    </li>
+	    <li>
+				<%= image_tag "flexslider-4.png" %>
+	    </li>
+	    <li>
+				<%= image_tag "flexslider-5.png" %>
+	    </li>
+	    <li>
+				<%= image_tag "flexslider-6.png" %>
+	    </li>
 	    <li>
 				<%= image_tag "flexslider-1.png" %>
 	    </li>
@@ -19,18 +31,18 @@
 	<div class="intro"><p>I&#8217;m a formally educated <strong>interaction</strong> &amp; <strong>visual designer</strong> with over ten years experience and a strong belief in user-centred methodologies</p></div>
 	<div class="description"><p>I work for <strong>Orange</strong> and during the past twelve years working in the industry have <strong>designed products &amp; services</strong> for <strong>major brands</strong>.</p><a href="#" title="Test Link">link goes here &rarr;</a></div>
 	<div id="work-examples" class="teaser">
-		<h2 class="main-heading">Examples of work</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<h2 class="main-heading">Examples of work</h2>
+		<p>My work includes the conception &amp; design of products &amp; services across different media including mobile, web &amp; television.</p>
 		<%= link_to 'View projects', projects_path, :class => "view-project" %>	
 	</div>
 	<div id="work-history" class="teaser">
-		<h2 class="main-heading">Work history</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+		<h2 class="main-heading">Work history</h2>
+		<p>Currently I work for the telecommunications company Orange within the conception of products &amp; services division.</p>
 		<%= link_to 'View more', about_path, :class => "view-project" %>	
 	</div>
 </section>
 <section id="social-links" class="clearfix">
-	<h2 class="main-heading">Social</h1>
+	<h2 class="main-heading">Social</h2>
 	<section id="pinboard" class="column-list">
 		<header>
 			<h2>Recently Bookmarked</h2>
@@ -38,9 +50,9 @@
 		</header>	
 		<% for entry in Pinboard.all(:limit => 10, :order => "pubat desc") %>
 		  <article>			
-				<h4><%= link_to h(entry.title), entry.url %></h4>
-				<h6><%= entry.pubat.to_s(:long_date) %></h6>
+				<h4><%= link_to h(entry.title), entry.url %></h4>				
 				<p><%= entry.summary %></p>
+				<h6><%= entry.pubat.to_s(:long_date) %></h6>
 			</article>
 		<% end %>
 	</section>

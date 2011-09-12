@@ -23,14 +23,20 @@ h1,h2,h3,h4,h5,h6 {
 a.view-project {
 	@include border-radius(5px);
 	background-color: $light_grey;
+	font-family: 'ProximaNova-Regular', serif;
+	font-size: 18px;
 	color: #FFFFFF;
 	text-decoration: none;
-	padding: 5px 10px;
+	padding: 10px 15px;
+	text-shadow: $mid_grey 0px 1px 1px;
+	&:hover {
+	background-color: $mid_grey;
+	text-shadow: black 0px 1px 1px;	
+	}
 }
 
 div#content-wrapper {
-	/*@include grid-overlay;*/
-		
+	/*@include grid-overlay;*/		
 	margin: 0 auto;
 	max-width: 1225px;
 	background-color: #ededed;
@@ -84,13 +90,16 @@ nav#main-nav {
 			padding-bottom: 22px;
 			display: block;
 			float: left;
-			font: 18px 'ProximaNova-Semibold', serif;
+			font: 18px 'ProximaNova-Regular', serif;
 			text-transform: uppercase;
 			text-shadow: #000000 0px 1px 1px;
 			color: #ffffff;
 			a {
 				text-decoration: none;
 				color: #bbbbbb;
+				&:hover {
+					color: white;
+				}
 			}
 		}
 		li.current {
@@ -125,17 +134,21 @@ header#sub-header {
 		li {
 			float: left;
 			margin-right: $standard_margin;
-			font-family: 'ProximaNova-Semibold', serif;
-			font-size: 13px;
+			font-family: 'ProximaNova-Regular', serif;
+			font-size: 14px;
 			padding: 12px 0;
+			text-shadow: $mid_grey 0px 1px 1px;
 			a {
 				color: white;
 				text-decoration: none;
+				&:hover {
+					color: white;
+					text-shadow: black 0px 1px 1px;
+				}
 			}
 		}
 	}
 }
-
 
 header#page-header {
 	padding: 140px 0 60px $standard_margin;
@@ -171,4 +184,20 @@ section.column-list {
 	float: left;
 	margin-left: $standard_margin;
 	width: 359px;
+}
+
+div.portfolio-form {
+	padding-left: $standard-margin;
+	input, textarea {
+		margin-bottom: $standard-margin;
+	}
+	label {
+		font-family: 'ProximaNova-Semibold', serif;
+		font-size: 20px;
+	}
+}
+
+footer.nav-buttons {
+	padding-left: $standard-margin;
+	font-size: 18px;
 }

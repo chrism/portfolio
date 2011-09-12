@@ -44,3 +44,12 @@ article#project p{
 article div.TV {
 	padding-bottom: $standard_margin;
 }
+
+#project-title {
+	font-family: 'ProximaNova-Light', serif;
+	color: $light_grey;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}

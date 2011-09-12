@@ -1,6 +1,9 @@
-<h1>Editing project</h1>
+<header id="page-header" class="projects">
+	<h1 class="main-heading">Edit Project</h1>
+</header>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<footer class="nav-buttons">
+	<%= link_to 'Show', @project %> | <%= link_to 'Back', projects_path %>
+</footer>

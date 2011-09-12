@@ -1,5 +1,8 @@
 <header id="page-header" class="projects">
-	<h1 class="main-heading">Recent Projects</h1>	
+	<h1 class="main-heading">Recent Projects</h1>
+	<% if can? :create, Project %>
+			<%= link_to "New Project", new_project_path, :class => "view-project" %>
+	<% end %>
 </header>
 
 <section id="projects">
@@ -20,7 +23,7 @@
 					<h6><%= project.projectformat %> / <%= project.client %></h6>				
 				</header>
 				<p>
-					<%= project.description.html_safe %>
+					<%= project.summary.html_safe %>
 				</p>
 				<% if project.categories %>		
 					<ul>
@@ -29,9 +32,10 @@
 						<% end %>
 					</ul>
 				<% end %>
-				<%= link_to 'View project', project, :class => "view-project" %>
+				
 			</div>			
 			<footer>
+				<%= link_to 'View project', project, :class => "view-project" %>
 			<p>
 				<% if can? :update, Project %>
 
@@ -47,5 +51,7 @@
 </section>
 
 <% if can? :create, Project %>
-  <%= link_to "New Project", new_project_path %>
+	<footer class="nav-buttons">
+		<%= link_to "New Project", new_project_path, :class => "view-project" %>
+	</footer>
 <% end %>
