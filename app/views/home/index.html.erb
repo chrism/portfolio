@@ -70,6 +70,16 @@
 	</section>
 	<section id="lastfm" class="column-list">
 		<header>
+			<h2>Tweeted</h2>
+			<h5>via <%= link_to "Twitter", "http://www.twitter.com/chrisdmasters" %></h5>
+		</header>
+		<article>
+			<% tweet = Tweet.last %>
+			<h2><%= tweet.message %></h2>
+			<h6><%= tweet.pub_at.to_s(:long_date) %></h6>
+		</article>
+		<p></p>
+		<header>
 			<h2>Listening</h2>
 			<h5>via <%= link_to "Last.fm", "http://www.last.fm/user/chris_masters" %></h5>
 		</header>	
@@ -85,6 +95,8 @@
 				<% end %>				
 			</article>
 		<% end %>
+		
+
 	</section>
 </section>
 

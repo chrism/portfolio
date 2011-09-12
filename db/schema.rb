@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110912152005) do
+ActiveRecord::Schema.define(:version => 20110912211336) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -69,6 +69,13 @@ ActiveRecord::Schema.define(:version => 20110912152005) do
     t.string   "projectformat"
     t.string   "shortname"
     t.string   "summary"
+  end
+
+  create_table "tweets", :force => true do |t|
+    t.string   "message"
+    t.datetime "pub_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

@@ -26,6 +26,9 @@ gem "feedzirra"
 # for last.fm api
 gem "rockstar", "~> 0.6.3"
 
+# for twitter
+gem "twitter", "~> 1.7.1"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

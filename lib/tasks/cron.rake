@@ -8,4 +8,7 @@ task :cron => :environment do
   puts "Pulling new last.fm details..."
   Lastfm.update_from_api
   puts "done last.fm."
+  puts "Pulling recent tweet..."
+  Tweet.recent_tweet
+  puts "done tweet."
 end

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  message: MyString
+  pub_at: 2011-09-12 23:13:36
+
+two:
+  message: MyString
+  pub_at: 2011-09-12 23:13:36
