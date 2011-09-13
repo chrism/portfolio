@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110913154931) do
+ActiveRecord::Schema.define(:version => 20110913223147) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -83,7 +83,10 @@ ActiveRecord::Schema.define(:version => 20110913154931) do
     t.string   "projectformat"
     t.string   "shortname"
     t.string   "summary"
+    t.string   "slug"
   end
+
+  add_index "projects", ["slug"], :name => "index_projects_on_slug", :unique => true
 
   create_table "tweets", :force => true do |t|
     t.string   "message"
