@@ -75,17 +75,30 @@
 		</header>
 		<article>
 			<% tweet = Tweet.last %>
-			<h2><%= tweet.message %></h2>
+			<h2><%= auto_link(tweet.message.html_safe) %></h2>
 			<h6><%= tweet.pub_at.to_s(:long_date) %></h6>
 		</article>
 		<p></p>
+		
+		
+		<header>
+			<h2>Visited</h2>
+			<h5>via <%= link_to "Foursquare", "https://foursquare.com/chrisdmasters" %></h5>
+		</header>
+		<article>
+			<% visited = Foursquare.order("pub_at DESC").first %>
+			<h2><%= link_to h(visited.title.html_safe), visited.url %></h2>
+			<h6><%= visited.pub_at.to_s(:long_date) %></h6>
+		</article>
+		<p></p>
+		
 		<header>
 			<h2>Listening</h2>
 			<h5>via <%= link_to "Last.fm", "http://www.last.fm/user/chris_masters" %></h5>
 		</header>	
-		<% for entry in Lastfm.limit(5).order("played_at DESC") %>
+		<% for entry in Lastfm.where("image_url IS NOT NULL").where("image_url != ''").where("played_at IS NOT NULL").limit(5).order("played_at DESC") %>
 		  <article>
-				<%= image_tag(entry.image_url) %> 
+				<%= link_to h(image_tag(entry.image_url)), entry.url %> 
 				<h4><%= link_to h(entry.name.html_safe), entry.url %></h4>				
 				<p><%= entry.artist.html_safe %></p>
 				<% if entry.played_at.blank? %>

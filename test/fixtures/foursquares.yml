@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  url: MyString
+  description: MyString
+  pub_at: 2011-09-13 17:49:31
+  guid: MyString
+  lat: 9.99
+  long: 9.99
+
+two:
+  title: MyString
+  url: MyString
+  description: MyString
+  pub_at: 2011-09-13 17:49:31
+  guid: MyString
+  lat: 9.99
+  long: 9.99
