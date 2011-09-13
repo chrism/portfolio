@@ -61,16 +61,10 @@ section#social-links {
 		margin-bottom: 20px;
 		h2 {
 			text-transform: uppercase;
+			padding-top: 3px;
 		}
 	}
-	a {
-		color: black;
-		font-family: 'ProximaNova-Semibold', serif;
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+	@include blacklink;
 	h6 {
 		color: $light_grey;
 	}
@@ -85,4 +79,36 @@ section#social-links {
 
 section#social-links article {
 	padding-bottom: 15px;
+}
+
+section#social-links header {
+	padding-left: 66px;
+	background-repeat: no-repeat;
+	background-position: middle left;
+}
+
+section#lastfm header {
+	background-image:url("lastfm-icon.png");
+}
+
+section#twitter {
+	padding-bottom: 20px;
+	header {
+		background-image:url("twitter-icon.png");
+	}
+}
+
+section#foursquare {
+	padding-bottom: 20px;
+	header {
+		background-image:url("foursquare-icon.png");
+	}
+}
+
+section#pinboard header {
+	background-image:url("pinboard-icon.png");
+}
+
+section#instapaper header {
+	background-image:url("instapaper-icon.png");
 }

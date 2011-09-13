@@ -16,8 +16,11 @@ flexslider-3.png: flexslider-3-c172f3bd0b83399394c109d92f08ea4a.png
 flexslider-4.png: flexslider-4-8c75eacdd379d6915ef7a6bc549f2810.png
 flexslider-5.png: flexslider-5-69387e5613e55fcd573fdcbac1f40dc9.png
 flexslider-6.png: flexslider-6-98d33de57fbe39793c968384ec47d8c5.png
+foursquare-icon.png: foursquare-icon-2da95853226af0e8a5c996712c2039d3.png
 grid-overlay.png: grid-overlay-9a23843f79b19cd3562733cc2e91f790.png
 home-bg.png: home-bg-feb4058a49eec80c27b065eb8239f33d.png
+instapaper-icon.png: instapaper-icon-937631fd791ecadb21f70703899b4f64.png
+lastfm-icon.png: lastfm-icon-09ca6115f557fbf427deec2722d040b9.png
 nma-first.png: nma-first-1f6a4806975b0211b80c5ae69065a018.png
 oms-web-home.png: oms-web-home-d6c320a05dc300585f3e7be33adda6e9.png
 orange-culture-first.png: orange-culture-first-d82be9001855930287330b151e809b92.png
@@ -26,7 +29,9 @@ orange-culture-second.png: orange-culture-second-4f95fd08c40e2908eacbf0b338c6c6e
 orange-culture-third.png: orange-culture-third-b4ca5b13586b4926c25906b471ea144f.png
 orange-player-first.png: orange-player-first-2791f6313e72b5727cd6c685e2e2eedd.png
 pigmen-home.png: pigmen-home-c68aa8379a5447efa6ef7c63e4cc6b62.png
+pinboard-icon.png: pinboard-icon-3eba2a2a39294156ceefe3ae530e69c8.png
 rails.png: rails-bd9ad5a560b5a3a7be0808c5cd76a798.png
+twitter-icon.png: twitter-icon-1ba429dda037060cc5a0d4f9e17dd890.png
 web-background.png: web-background-12f826e381d740eff0d6f97b49387d19.png
 web-tint.png: web-tint-a61374bb16d72250b3c07078ec119b4f.png
 xbox-epg-columns.png: xbox-epg-columns-4031ddccd619a42f6860303029f86f97.png
@@ -121,4 +126,4 @@ webfonts/woff/style_148550.woff: webfonts/woff/style_148550-a9bfd647b594dfe8d38f
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2668c24c8b5789cc026320de10e0b572.js
-application.css: application-bd36177e2449219b30c85a16e3ca04c1.css
+application.css: application-c5184aab02fcb41f75f92ca22b6ccfdc.css

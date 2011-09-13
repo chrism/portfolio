@@ -4,6 +4,17 @@ $dark_grey: #2d2d2d;
 $mid_grey: #444444;
 $light_grey: #AAAAAA;
 
+@mixin blacklink {
+	a {
+		color: black;
+		font-family: 'ProximaNova-Semibold', serif;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 
 @mixin grid-overlay {
 	background-image:url("grid-overlay.png");
@@ -178,6 +189,9 @@ footer#global {
 	border-top: 1px solid $lightest_grey;
 	padding: $standard_margin 0;
 	margin: $standard_margin $standard_margin 0 $standard_margin;
+	h6 {
+		@include blacklink;
+	}
 }
 
 section.column-list {
