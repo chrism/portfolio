@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(:version => 20110913154931) do
     t.boolean  "mainimage"
   end
 
+  add_index "projectimages", ["project_id"], :name => "index_projectimages_on_project_id"
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.text     "description"
