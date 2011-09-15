@@ -31,6 +31,7 @@ orange-player-first.png: orange-player-first-2791f6313e72b5727cd6c685e2e2eedd.pn
 pigmen-home.png: pigmen-home-c68aa8379a5447efa6ef7c63e4cc6b62.png
 pinboard-icon.png: pinboard-icon-3eba2a2a39294156ceefe3ae530e69c8.png
 rails.png: rails-bd9ad5a560b5a3a7be0808c5cd76a798.png
+small-arrow-light-grey.png: small-arrow-light-grey-a63182a6592d175c9b8d533c3b2b4fff.png
 twitter-icon.png: twitter-icon-1ba429dda037060cc5a0d4f9e17dd890.png
 web-background.png: web-background-12f826e381d740eff0d6f97b49387d19.png
 web-tint.png: web-tint-a61374bb16d72250b3c07078ec119b4f.png
@@ -126,4 +127,4 @@ webfonts/woff/style_148550.woff: webfonts/woff/style_148550-a9bfd647b594dfe8d38f
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2668c24c8b5789cc026320de10e0b572.js
-application.css: application-c5184aab02fcb41f75f92ca22b6ccfdc.css
+application.css: application-beb9664322640c88af3702275602c9d6.css

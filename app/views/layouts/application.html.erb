@@ -35,17 +35,17 @@
 		<% @projects = Project.all %>
 		<header id="sub-header">			
 			<nav class="clearfix">				
-				<ul>
-					<% @projects.each do |project| %>
-					<li><%= link_to project.shortname, project_path(project) %></li>
+				<%= tabs_tag :namespace => :subnav do |tab| %>				
+					<% @projects.each do |project| %>		
+						<%= tab.send(project.slug.gsub('-' , '_'), project.shortname, project_path(project)) %>										
 					<% end %>
-				</ul>			
+				<% end %>
 			</nav>
 		</header>
 		<% end %>
 	</div>
 	
-	<div id="content-wrapper" class="<%= current_tab %>">
+	<div id="content-wrapper" class="<%= current_tab %>">		
 		<% flash.each do |name, msg| %>
 		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 		<% end %>

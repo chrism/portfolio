@@ -157,6 +157,13 @@ header#sub-header {
 					text-shadow: black 0px 1px 1px;
 				}
 			}
+			&.current {
+				color: $dark_grey;
+				text-shadow: $lightest_grey 0px 1px 1px;
+				background-image:url("small-arrow-light-grey.png");
+				background-repeat: no-repeat;
+				background-position: bottom center;
+			}
 		}
 	}
 }
