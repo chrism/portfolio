@@ -14,4 +14,7 @@ task :cron => :environment do
   puts "Pulling new foursquare locations..."
   Foursquare.update_from_feed("https://feeds.foursquare.com/history/HFH0DKDVXSHEZQFPUL3RZNNUQDLYNI0T.rss")
   puts "done foursquare."
+  puts "Pulling latest book reading..."
+  Goodread.update_from_feed("http://www.goodreads.com/review/list_rss/6315267?key=8f734a88c346267878d195ad29be5d6951bfffc7&shelf=currently-reading")
+  puts "done goodread."
 end

@@ -17,6 +17,7 @@ flexslider-4.png: flexslider-4-8c75eacdd379d6915ef7a6bc549f2810.png
 flexslider-5.png: flexslider-5-69387e5613e55fcd573fdcbac1f40dc9.png
 flexslider-6.png: flexslider-6-98d33de57fbe39793c968384ec47d8c5.png
 foursquare-icon.png: foursquare-icon-2da95853226af0e8a5c996712c2039d3.png
+goodread-icon.png: goodread-icon-806824a2739c0a89c54264d36108b5b8.png
 grid-overlay.png: grid-overlay-9a23843f79b19cd3562733cc2e91f790.png
 home-bg.png: home-bg-feb4058a49eec80c27b065eb8239f33d.png
 instapaper-icon.png: instapaper-icon-937631fd791ecadb21f70703899b4f64.png
@@ -127,4 +128,4 @@ webfonts/woff/style_148550.woff: webfonts/woff/style_148550-a9bfd647b594dfe8d38f
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2668c24c8b5789cc026320de10e0b572.js
-application.css: application-beb9664322640c88af3702275602c9d6.css
+application.css: application-df87de3ca6a1358f2ac7dcc17de1d5ba.css

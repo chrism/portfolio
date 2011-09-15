@@ -87,8 +87,13 @@ section#social-links header {
 	background-position: middle left;
 }
 
-section#lastfm header {
+section#lastfm {
+	header {
 	background-image:url("lastfm-icon.png");
+	}
+	.content {
+		overflow: hidden;
+	}
 }
 
 section#twitter {
@@ -111,4 +116,14 @@ section#pinboard header {
 
 section#instapaper header {
 	background-image:url("instapaper-icon.png");
+}
+
+section#goodread {
+	padding-bottom: 20px;
+	header {
+		background-image:url("goodread-icon.png");
+	}
+	.content {
+		overflow: hidden;
+	}
 }

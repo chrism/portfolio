@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110913223147) do
+ActiveRecord::Schema.define(:version => 20110915213222) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,20 @@ ActiveRecord::Schema.define(:version => 20110913223147) do
     t.decimal  "long",        :precision => 15, :scale => 10
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "goodreads", :force => true do |t|
+    t.string   "title"
+    t.datetime "pub_at"
+    t.integer  "book_id"
+    t.string   "book_small_image_url"
+    t.string   "book_medium_image_url"
+    t.string   "book_large_image_url"
+    t.string   "author_name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "url"
   end
 
   create_table "instapapers", :force => true do |t|
@@ -71,8 +85,6 @@ ActiveRecord::Schema.define(:version => 20110913223147) do
     t.datetime "updated_at"
     t.boolean  "mainimage"
   end
-
-  add_index "projectimages", ["project_id"], :name => "index_projectimages_on_project_id"
 
   create_table "projects", :force => true do |t|
     t.string   "title"
