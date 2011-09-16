@@ -1,11 +1,13 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#herobox {
+	padding-bottom: $standard_margin;
+}
 
 #about-me-intro {
 	float: right;
-	width: 755px + $standard_margin;
-	
+	width: 64.653061224489796%;	
 	.intro {
 		padding: $standard_margin;
 		font-family: 'ProximaNova-Light', serif;
@@ -21,7 +23,7 @@
 	}
 	.teaser {
 		float: left;
-		width: 359px;
+		width: 45.328282828282828%;
 		h2.main-heading {
 			font-family: 'ProximaNova-Light', serif;
 			margin-top: $standard_margin;
@@ -38,27 +40,44 @@
 
 #example-projects {
 	position: relative;
-	padding-top:32px;
 	float: left;
-	width: 396px;
-	#web-tint {
+	width: 32.3265306122449%;
+	img#web-tint {
 		z-index: 10;
 		position:absolute;
 		top: 0;
 		right: 0;
+		width: 100%;
+		margin: 0;
+	}
+	img#web-top, img#web-bottom {
+		display: block;
+		margin-bottom: 0;
+		max-width: 100%;
+	}
+	#slide-frame {
+		background-color: black;
+	}
+	.flexslider {
+		width: 91.414141414141414%;
 	}
 }
 
 #social-links {
-	padding-top: 120px;
 	clear: left;
 }
 
 section#social-links {
+	.main-heading {
+		padding-top: 0;
+	}
 	header {
 		padding-bottom: 10px;
 		border-bottom: 1px solid $lightest_grey;
 		margin-bottom: 20px;
+		padding-left: 66px;
+		background-repeat: no-repeat;
+		background-position: middle left;
 		h2 {
 			text-transform: uppercase;
 			padding-top: 3px;
@@ -75,21 +94,24 @@ section#social-links {
 		float: left;
 		padding-right: 20px;
 	}
-}
-
-section#social-links article {
-	padding-bottom: 15px;
-}
-
-section#social-links header {
-	padding-left: 66px;
-	background-repeat: no-repeat;
-	background-position: middle left;
+	article {
+		padding-bottom: 15px;
+	}
 }
 
 section#lastfm {
 	header {
 	background-image:url("lastfm-icon.png");
+	}
+	.content {
+		overflow: hidden;
+	}
+}
+
+section#goodread {
+	padding-bottom: 20px;
+	header {
+		background-image:url("goodread-icon.png");
 	}
 	.content {
 		overflow: hidden;
@@ -116,14 +138,4 @@ section#pinboard header {
 
 section#instapaper header {
 	background-image:url("instapaper-icon.png");
-}
-
-section#goodread {
-	padding-bottom: 20px;
-	header {
-		background-image:url("goodread-icon.png");
-	}
-	.content {
-		overflow: hidden;
-	}
 }

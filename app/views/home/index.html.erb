@@ -1,46 +1,40 @@
 <header id="page-header">
 	<h1 class="main-heading">Chris Masters</h1>
 </header>
-<div id="example-projects">
-	<div id="web-tint"><%= image_tag "web-tint.png" %></div>
-	<div class="flexslider">
-	  <ul class="slides">
-		  <li>
-				<%= image_tag "flexslider-3.png" %>
-	    </li>
-	    <li>
-				<%= image_tag "flexslider-4.png" %>
-	    </li>
-	    <li>
-				<%= image_tag "flexslider-5.png" %>
-	    </li>
-	    <li>
-				<%= image_tag "flexslider-6.png" %>
-	    </li>
-	    <li>
-				<%= image_tag "flexslider-1.png" %>
-	    </li>
-	    <li>
-				<%= image_tag "flexslider-2.png" %>
-	    </li>
-	  </ul>
-	</div>
+<div id="herobox" class="clearfix">
+	<section id="example-projects">
+		<%= image_tag("web-tint.png", :id => 'web-tint') %>
+		<%= image_tag("web-top.png", :id => 'web-top') %>
+		<div id="slide-frame">
+			<div class="flexslider">
+			  <ul class="slides">
+				  <li><%= image_tag "flexslider-3.png" %></li>
+			    <li><%= image_tag "flexslider-4.png" %></li>
+			    <li><%= image_tag "flexslider-5.png" %></li>
+			    <li><%= image_tag "flexslider-6.png" %></li>
+			    <li><%= image_tag "flexslider-1.png" %></li>
+			    <li><%= image_tag "flexslider-2.png" %></li>
+			  </ul>
+			</div>
+		</div>
+		<%= image_tag("web-bottom.png", :id => 'web-bottom') %>
+	</section>
+	
+	<section id="about-me-intro" class="clearfix">
+		<div class="intro"><p>I&#8217;m a formally educated <strong>interaction</strong> &amp; <strong>visual designer</strong> with over ten years experience and a strong belief in user-centred methodologies</p></div>
+		<div class="description"><p>I work for <strong>Orange</strong> and during the past twelve years working in the industry have <strong>designed products &amp; services</strong> for <strong>major brands</strong>.</p><a href="#" title="Test Link">link goes here &rarr;</a></div>
+		<div id="work-examples" class="teaser">
+			<h2 class="main-heading">Examples of work</h2>
+			<p>My work includes the conception &amp; design of products &amp; services across different media including mobile, web &amp; television.</p>
+			<%= link_to 'View projects', projects_path, :class => "view-project" %>	
+		</div>
+		<div id="work-history" class="teaser">
+			<h2 class="main-heading">Work history</h2>
+			<p>Currently I work for the telecommunications company Orange within the conception of products &amp; services division.</p>
+			<%= link_to 'View more', about_path, :class => "view-project" %>	
+		</div>
+	</section>
 </div>
-
-<section id="about-me-intro" class="clearfix">
-	<div class="intro"><p>I&#8217;m a formally educated <strong>interaction</strong> &amp; <strong>visual designer</strong> with over ten years experience and a strong belief in user-centred methodologies</p></div>
-	<div class="description"><p>I work for <strong>Orange</strong> and during the past twelve years working in the industry have <strong>designed products &amp; services</strong> for <strong>major brands</strong>.</p><a href="#" title="Test Link">link goes here &rarr;</a></div>
-	<div id="work-examples" class="teaser">
-		<h2 class="main-heading">Examples of work</h2>
-		<p>My work includes the conception &amp; design of products &amp; services across different media including mobile, web &amp; television.</p>
-		<%= link_to 'View projects', projects_path, :class => "view-project" %>	
-	</div>
-	<div id="work-history" class="teaser">
-		<h2 class="main-heading">Work history</h2>
-		<p>Currently I work for the telecommunications company Orange within the conception of products &amp; services division.</p>
-		<%= link_to 'View more', about_path, :class => "view-project" %>	
-	</div>
-</section>
 <section id="social-links" class="clearfix">
 	<h2 class="main-heading">Social</h2>
 	<section id="pinboard" class="column-list">
@@ -59,7 +53,7 @@
 	<section class="column-list">
 		<section id="goodread" class="clearfix">
 			<header>
-				<h2>Currently Reading</h2>
+				<h2>Current Read</h2>
 				<h5>via <%= link_to "Goodread", "http://www.goodreads.com/chrismasters" %></h5>
 			</header>
 			<article>

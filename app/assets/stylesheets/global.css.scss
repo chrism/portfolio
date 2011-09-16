@@ -3,6 +3,7 @@ $lightest_grey: #dddddd;
 $dark_grey: #2d2d2d;
 $mid_grey: #444444;
 $light_grey: #AAAAAA;
+$maximum_width: 1225px;
 
 @mixin blacklink {
 	a {
@@ -14,7 +15,6 @@ $light_grey: #AAAAAA;
 		}
 	}
 }
-
 
 @mixin grid-overlay {
 	background-image:url("grid-overlay.png");
@@ -49,13 +49,8 @@ a.view-project {
 div#content-wrapper {
 	/*@include grid-overlay;*/		
 	margin: 0 auto;
-	max-width: 1225px;
+	max-width: $maximum_width;
 	background-color: #ededed;
-}
-
-div#content-wrapper.home {
-	background-image:url("home-bg.png");
-	background-repeat: no-repeat;
 }
 
 div#header-wrapper {
@@ -68,7 +63,7 @@ div#header-wrapper {
 
 header#main-header {
 	/*@include grid-overlay;*/
-	max-width: 1225px;
+	max-width: $maximum_width;
 	margin: 0 auto;
 	background-color: $dark_grey;
 	#login {
@@ -203,8 +198,8 @@ footer#global {
 
 section.column-list {
 	float: left;
-	margin-left: $standard_margin;
-	width: 359px;
+	margin-left: 3.020408163265306%; /* $standard height / 1225 */
+	width: 29.306122448979592%; /* 359 / 1225 */
 }
 
 div.portfolio-form {

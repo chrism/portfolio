@@ -3,13 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section#projects article, article#project {
-	margin: 0 $standard_margin;
+	margin: 0 3.020408163265306%; /* $standard height / 1225 */
 	padding: 0 0 $standard_margin 0;
 	/*border-top: 1px solid $lightest_grey;*/
 	div.images {
-			margin-right: $standard_margin;
-			width: 755px;
+			margin-right: 3.132938187976291%; /* 37 / (1255 - 37 x 2) */
+			width: 65.595134665508254%; /* 755 / (1255 - 37 x 2) */
 			float: left;
+			img {
+				width: 100%;
+			}
 			ul {
 				list-style: none;
 				li {
