@@ -19,7 +19,6 @@ flexslider-6.png: flexslider-6-98d33de57fbe39793c968384ec47d8c5.png
 foursquare-icon.png: foursquare-icon-2da95853226af0e8a5c996712c2039d3.png
 goodread-icon.png: goodread-icon-806824a2739c0a89c54264d36108b5b8.png
 grid-overlay.png: grid-overlay-9a23843f79b19cd3562733cc2e91f790.png
-home-bg.png: home-bg-feb4058a49eec80c27b065eb8239f33d.png
 instapaper-icon.png: instapaper-icon-937631fd791ecadb21f70703899b4f64.png
 lastfm-icon.png: lastfm-icon-09ca6115f557fbf427deec2722d040b9.png
 nma-first.png: nma-first-1f6a4806975b0211b80c5ae69065a018.png
@@ -34,8 +33,9 @@ pinboard-icon.png: pinboard-icon-3eba2a2a39294156ceefe3ae530e69c8.png
 rails.png: rails-bd9ad5a560b5a3a7be0808c5cd76a798.png
 small-arrow-light-grey.png: small-arrow-light-grey-a63182a6592d175c9b8d533c3b2b4fff.png
 twitter-icon.png: twitter-icon-1ba429dda037060cc5a0d4f9e17dd890.png
-web-background.png: web-background-12f826e381d740eff0d6f97b49387d19.png
-web-tint.png: web-tint-a61374bb16d72250b3c07078ec119b4f.png
+web-bottom.png: web-bottom-f9da9a683b35c14254478b4c2229508d.png
+web-tint.png: web-tint-b277532e0983b902fbb38988b3c7fd03.png
+web-top.png: web-top-4fc83b01f1e277afbc41acbfa5018823.png
 xbox-epg-columns.png: xbox-epg-columns-4031ddccd619a42f6860303029f86f97.png
 xbox-epg.png: xbox-epg-ffbd10f24aa984cc635fa307148ada08.png
 xbox-tvtwist.png: xbox-tvtwist-245a11e852b7e2bbe14d2e545a19161e.png
@@ -128,4 +128,4 @@ webfonts/woff/style_148550.woff: webfonts/woff/style_148550-a9bfd647b594dfe8d38f
 jquery-ui.min.js: jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js
 jquery.min.js: jquery-8a50feed8d29566738ad005e19fe1c2d.min.js
 application.js: application-2668c24c8b5789cc026320de10e0b572.js
-application.css: application-df87de3ca6a1358f2ac7dcc17de1d5ba.css
+application.css: application-aa8078b9542ba5e1e7d622272a5398f8.css
