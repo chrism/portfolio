@@ -6,7 +6,7 @@
 		<% if @project.projectimages %>		
 			<ul>
 				<% @project.projectimages.each do |projectimage| %>
-			    <li><%= image_tag projectimage.url %></li>
+			    <li><%= image_tag("projectimages/" + projectimage.url) %></li>
 				<% end %>
 			</ul>
 		<% end %>

@@ -12,7 +12,7 @@
 				<% if project.projectimages %>
 					<% project.projectimages.each do |projectimage| %>
 						<% if projectimage.mainimage %>
-				    	<%= image_tag projectimage.url %>
+				    	<%= image_tag("projectimages/" + projectimage.url) %>
 						<% end %>
 					<% end %>
 				<% end %>

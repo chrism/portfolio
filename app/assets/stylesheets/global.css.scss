@@ -17,7 +17,7 @@ $maximum_width: 1225px;
 }
 
 @mixin grid-overlay {
-	background-image:url("grid-overlay.png");
+	background-image:url("global/grid-overlay.png");
 	background-repeat: repeat-y;
 	background-position: top center;
 }
@@ -109,7 +109,7 @@ nav#main-nav {
 			}
 		}
 		li.current {
-			background-image:url("arrow-light-grey.png");
+			background-image:url("global/arrow-light-grey.png");
 			background-repeat: no-repeat;
 			background-position: bottom center;
 		}
@@ -120,7 +120,7 @@ nav#main-nav {
 			margin-right: 56px;
 		}
 		li#projects.current {
-			background-image:url("arrow-mid-grey.png");
+			background-image:url("global/arrow-mid-grey.png");
 		}
 		li#home {
 			margin-right: 62px;
@@ -155,7 +155,7 @@ header#sub-header {
 			&.current {
 				color: $dark_grey;
 				text-shadow: $lightest_grey 0px 1px 1px;
-				background-image:url("small-arrow-light-grey.png");
+				background-image:url("global/small-arrow-light-grey.png");
 				background-repeat: no-repeat;
 				background-position: bottom center;
 			}
