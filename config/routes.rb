@@ -1,4 +1,6 @@
 Chrismasters::Application.routes.draw do
+  get "projectimages/index"
+
   # get "pages/about"
   match 'about' => 'pages#about', :as => :about
 
@@ -9,7 +11,10 @@ Chrismasters::Application.routes.draw do
   
   root :to => 'home#index'
 
-  resources :projects
+  resources :projects do
+    resources :projectimages
+  end
+  
   resources :users
   resources :sessions  
   

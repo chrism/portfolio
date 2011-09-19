@@ -1,0 +1,28 @@
+<div id="projectimages-edit-form" class="portfolio-form">
+	<%= form_for [@project, @projectimage] do |f| %>
+	  <% if @projectimage.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@projectimage.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+	      <ul>
+	      <% @projectimage.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	 	 <div class="field">
+		    <%= f.label :url %><br />
+		    <%= f.text_field :url %>
+		  </div>
+		  <div class="field">
+		    <%= f.label :mainimage %><br />
+		    <%= f.check_box :mainimage %>
+		  </div>
+
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>	
+</div>

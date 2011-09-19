@@ -11,7 +11,7 @@
 			<div class="<%= project.projectformat %> images">
 				<% if project.projectimages %>
 					<% project.projectimages.each do |projectimage| %>
-						<% if projectimage.mainimage %>
+						<% if projectimage.mainimage == true %>
 				    	<%= image_tag("projectimages/" + projectimage.url) %>
 						<% end %>
 					<% end %>
@@ -32,20 +32,19 @@
 						<% end %>
 					</ul>
 				<% end %>
-				
-			</div>			
-			<footer>
-				<%= link_to 'View project', project, :class => "view-project" %>
-			<p>
-				<% if can? :update, Project %>
+				<footer>
+					<%= link_to 'View project', project, :class => "view-project" %>
+				<p class="nav-buttons">
+					<% if can? :update, Project %>
 
-					<%= link_to 'Edit', edit_project_path(project) %>
-				<% end %>
-				<% if can? :destroy, Project %>
-					| <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
-				<% end %>
-			</p>
-			</footer>
+						<%= link_to 'Edit', edit_project_path(project) %>
+					<% end %>
+					<% if can? :destroy, Project %>
+						| <%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %>
+					<% end %>
+				</p>
+				</footer>
+			</div>			
 		</article>
 	<% end %>	
 </section>

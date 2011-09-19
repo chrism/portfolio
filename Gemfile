@@ -35,6 +35,9 @@ gem "rails_autolink", "~> 1.0.2"
 # for good urls
 gem "friendly_id", "~> 4.0.0.beta8"
 
+# for ordering projects and projectimages
+gem "acts_as_list", "~> 0.1.4"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -45,14 +45,12 @@
 			</nav>
 		</header>
 		<% end %>
-	</div>
-	
-	<div id="content-wrapper" class="<%= current_tab %>">		
 		<% flash.each do |name, msg| %>
 		  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 		<% end %>
-
-
+	</div>
+	
+	<div id="content-wrapper" class="<%= current_tab %>">		
 		<!-- this is application stuff ^ -->
 
 		<%= yield %>

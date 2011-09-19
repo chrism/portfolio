@@ -31,21 +31,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'ProximaNova-Light', serif;
 }
 
-a.view-project {
-	@include border-radius(5px);
-	background-color: $light_grey;
-	font-family: 'ProximaNova-Regular', serif;
-	font-size: 18px;
-	color: #FFFFFF;
-	text-decoration: none;
-	padding: 10px 15px;
-	text-shadow: $mid_grey 0px 1px 1px;
-	&:hover {
-	background-color: $mid_grey;
-	text-shadow: black 0px 1px 1px;	
-	}
-}
-
 div#content-wrapper {
 	/*@include grid-overlay;*/		
 	margin: 0 auto;
@@ -213,7 +198,31 @@ div.portfolio-form {
 	}
 }
 
-footer.nav-buttons {
-	padding-left: $standard-margin;
+a.view-project {
+	@include border-radius(5px);
+	background-color: $light_grey;
+	font-family: 'ProximaNova-Regular', serif;
 	font-size: 18px;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 10px 15px;
+	text-shadow: $mid_grey 0px 1px 1px;
+	&:hover {
+	background-color: $mid_grey;
+	text-shadow: black 0px 1px 1px;	
+	}
+}
+
+.nav-buttons {
+	padding-top: 20px;
+	font-size: 18px;
+}
+
+a.title-link {
+	font-family: 'ProximaNova-Light', serif;
+	color: $light_grey;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }

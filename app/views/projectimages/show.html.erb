@@ -1,0 +1,8 @@
+<header id="page-header">
+	<h1 class="main-heading">Projectimage for <%= link_to @project.title, @project, :class => "title-link" %></h1>
+</header>
+<section id="projectimages">
+		<h2><%= @projectimage.url %></h2>
+		<h6><%= @projectimage.project_id %> / <%= @projectimage.mainimage %></h6>
+		<%= link_to 'Edit', edit_project_projectimage_path(@project, @projectimage) %>
+</section>

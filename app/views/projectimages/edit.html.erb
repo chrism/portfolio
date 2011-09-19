@@ -1,0 +1,9 @@
+<header id="page-header">
+	<h1 class="main-heading">Edit Projectimages for <%= link_to @project.title, @project, :class => "title-link" %></h1>
+</header>
+
+<%= render 'form' %>
+
+<footer class="nav-buttons">
+	<%= link_to 'Show', @project %> | <%= link_to 'Back', projects_path %>
+</footer>

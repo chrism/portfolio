@@ -58,16 +58,20 @@
 			</header>
 			<article>
 				<% book = Goodread.order("created_at DESC").first %>
-				<%= link_to h(image_tag(book.book_small_image_url)), book.url %>
-				<div class="content">
-					<% if book %>
-						<h4><%= link_to h(book.title.html_safe), book.url %></h4>
-						<p><%= book.author_name.html_safe %></p>
-						<h6><%= book.pub_at.to_s(:long_date) %></h6>
-					<% else %>
-					  <h2>Sorry, no recent location</h2>
-					<% end %>
-				</div> 
+				<% if book %>
+					<%= link_to h(image_tag(book.book_small_image_url)), book.url %>
+					<div class="content">
+						<% if book %>
+							<h4><%= link_to h(book.title.html_safe), book.url %></h4>
+							<p><%= book.author_name.html_safe %></p>
+							<h6><%= book.pub_at.to_s(:long_date) %></h6>
+						<% else %>
+						  <h2>Sorry, no recent location</h2>
+						<% end %>
+					</div>
+				<% else %>
+					<h2>Sorry, no recent reads</h2>
+				<% end %>
 			</article>
 		</section>
 
