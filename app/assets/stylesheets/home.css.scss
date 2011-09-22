@@ -33,6 +33,13 @@
 	}
 	#work-history {
 		padding-left: $standard_margin;
+		
+	}
+	
+	#work-examples, #work-history {
+		h2.main-heading {
+			padding-left: 0 !important;
+		}
 	}
 }
 
@@ -61,11 +68,8 @@
 	}
 }
 
-#social-links {
-	clear: left;
-}
-
 section#social-links {
+	clear: left;
 	.main-heading {
 		padding-top: 0;
 	}
@@ -98,18 +102,21 @@ section#social-links {
 	section.single {
 		padding-bottom: 1.5em;
 	}
+	section {
+		margin-left: 3.020408163265306%; /* $standard height / 1225 */
+		width: 29.306122448979592%; /* 359 / 1225 */
+	}
 }
 
-section#lastfm {
+section#pinboard {
+	float:left;
 	header {
-	background-image:url("icons/lastfm-icon.png");
-	}
-	.content {
-		overflow: hidden;
+		background-image:url("icons/pinboard-icon.png");
 	}
 }
 
-section#goodread {	
+section#goodread {
+	float: left;
 	header {
 		background-image:url("icons/goodread-icon.png");
 	}
@@ -118,18 +125,33 @@ section#goodread {
 	}
 }
 
-section#twitter header {
-	background-image:url("icons/twitter-icon.png");
+section#instapaper {
+	float: left;
+	header {
+		background-image:url("icons/instapaper-icon.png");
+	}
 }
 
-section#foursquare header {
-	background-image:url("icons/foursquare-icon.png");
+section#twitter {
+	float: left;
+	header {
+		background-image:url("icons/twitter-icon.png");
+	}
 }
 
-section#pinboard header {
-	background-image:url("icons/pinboard-icon.png");
+section#foursquare {
+	float: left;
+	header {
+		background-image:url("icons/foursquare-icon.png");
+	}
 }
 
-section#instapaper header {
-	background-image:url("icons/instapaper-icon.png");
+section#lastfm {
+	float: left;
+	header {
+	background-image:url("icons/lastfm-icon.png");
+	}
+	.content {
+		overflow: hidden;
+	}
 }

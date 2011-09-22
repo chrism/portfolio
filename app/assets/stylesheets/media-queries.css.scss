@@ -1,3 +1,32 @@
-@media screen and (max-width: 768px) {
-	color: red !important;
+@media screen and (max-width: 1150px) {	
+	#about-me-intro .intro p {
+		font-size: 1.75em; /* 28px / 16px */
+	}
+}
+
+@media screen and (max-width: 750px) {
+	header#page-header{
+		padding-top: 100px;
+		padding-bottom: 20px;
+	}	
+	#about-me-intro {
+		float:none;
+		width: 93.959183673469388%;
+		padding: 0 3.020408163265306%;
+		.intro {
+			@include border-radius(20px);
+		}
+	}
+	#example-projects {
+		display: none;
+	}
+	h2.main-heading {
+		padding: 20px 0 20px 3.020408163265306% !important;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	section#social-links section {
+		width: 45.469387755102041%;
+	}
 }

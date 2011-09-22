@@ -111,14 +111,15 @@ header#main-header {
 }
 
 nav#main-nav {
-	float:right;
+	/*float:right;*/
 	ul {
-		margin-top: 25px;
-		margin-right: $standard_margin;
+		margin: 0;
+		padding: 0;
+/*		margin-right: $standard_margin;*/
 		li {
+			padding-top: 25px;
 			padding-bottom: 22px;
 			display: block;
-			float: left;
 			@include regularweight-font;
 			@include largesize-font;
 			text-transform: uppercase;
@@ -138,16 +139,19 @@ nav#main-nav {
 			background-position: bottom center;
 		}
 		li#about {
-			margin-right: 18px;
+			float: right;
+			margin-right: 3.020408163265306%; /* 37px / 1225px*/
 		}
 		li#projects {
-			margin-right: 56px;
+			float: right;
+			margin-right: 6.040816326530612%; /* 74px / 1225px*/
 		}
 		li#projects.current {
 			background-image:url("global/arrow-mid-grey.png");
 		}
 		li#home {
-			margin-right: 62px;
+			float: right;
+			margin-right: 6.857142857142857%; /* 84px / 1225px */
 		}
 	}
 }
@@ -201,7 +205,7 @@ header#page-header.projects {
 }
 
 h2.main-heading {
-	padding: 60px 0 60px $standard_margin;
+	padding: 60px 0 60px 3.020408163265306%;
 }
 
 strong {

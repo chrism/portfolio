@@ -25,11 +25,11 @@
 			    <p><%= link_to "Log In", log_in_path %></p>
 				<% end %>
 			</div>
-			<nav id="main-nav">
+			<nav id="main-nav" class="clearfix">
 				<%= tabs_tag do |tab| %>
-				  <%= tab.home 'Home', root_path, :id => 'home' %>
-				  <%= tab.project 'Projects', projects_path, :id => 'projects' %>
 					<%= tab.about 'About', about_path, :id => 'about' %>
+					<%= tab.project 'Projects', projects_path, :id => 'projects' %>
+				  <%= tab.home 'Home', root_path, :id => 'home' %>				
 				<% end %>
 			</nav>
 		</header>
