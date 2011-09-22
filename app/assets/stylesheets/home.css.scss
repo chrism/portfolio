@@ -10,11 +10,11 @@
 	width: 64.653061224489796%;	
 	.intro {
 		padding: $standard_margin;
-		font-family: 'ProximaNova-Light', serif;
+		@include lightweight-font;
 		@include border-radius(20px 0 0 20px);
 		background: rgba(255,255,255,0.7);
 		p {
-			font-size: 36px;
+			@include massivesize-font;
 			color: black;
 		}
 	}
@@ -25,7 +25,7 @@
 		float: left;
 		width: 45.328282828282828%;
 		h2.main-heading {
-			font-family: 'ProximaNova-Light', serif;
+			@include lightweight-font;
 			margin-top: $standard_margin;
 			padding: 0;
 		}

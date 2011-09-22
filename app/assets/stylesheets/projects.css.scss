@@ -5,7 +5,6 @@
 section#projects article, article#project {
 	margin: 0 3.020408163265306%; /* $standard height / 1225 */
 	padding: 0 0 $standard_margin 0;
-	/*border-top: 1px solid $lightest_grey;*/
 	div.images {
 			margin-right: 3.132938187976291%; /* 37 / (1255 - 37 x 2) */
 			width: 65.595134665508254%; /* 755 / (1255 - 37 x 2) */
@@ -31,17 +30,27 @@ section#projects article, article#project {
 				text-transform: uppercase;
 			}
 		}
-		p {			
+		p, ul li {
+			@include smallsize-font;	
 			color: #545454;
 			strong {
 				color: $dark_grey;
 			}
 		}
+		ul {
+			list-style-type: square;
+		}
+		ul li {
+			color: $light_grey;
+		}
+		footer {
+			margin-top: 30px;
+		}
 	}
 }
 
-article#project p{
-	font-size: 16px;
+article#project div.details p, article#project div.details ul li{
+	@include regularsize-font;
 }
 
 article div.TV {

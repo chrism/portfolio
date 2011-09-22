@@ -8,7 +8,7 @@ $maximum_width: 1225px;
 @mixin blacklink {
 	a {
 		color: black;
-		font-family: 'ProximaNova-Semibold', serif;
+		@include boldweight-font;
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
@@ -22,13 +22,51 @@ $maximum_width: 1225px;
 	background-position: top center;
 }
 
+@mixin lightweight-font {
+	font-family: 'ProximaNova-Light', sans-serif;
+}
+
+@mixin regularweight-font {
+	font-family: 'ProximaNova-Regular', sans-serif;
+}
+
+@mixin semiboldweight-font {
+	font-family: 'ProximaNova-Semibold', sans-serif;
+}
+
+@mixin boldweight-font {
+	font-family: 'ProximaNova-Bold', sans-serif;
+}
+
+@mixin smallestsize-font {
+	font-size: 0.75em; /* 16px / 12px */
+}
+
+@mixin smallsize-font {
+	font-size: 0.875em; /* 16px / 14px */
+}
+
+@mixin regularsize-font {
+	font-size: 1em; /* 16px / 16px */
+}
+
+@mixin largesize-font {
+	font-size: 1.125em; /* 16px / 18px */
+}
+
+@mixin massivesize-font {
+	font-size: 2.25em; /* 16px / 36px */
+}
+
+
 body {
-	font-family: 'ProximaNova-Regular', serif;
-	background-color: $lightest_grey;
+	font-size: 100%;
+	@include regularweight-font;
+	@include linear-gradient(tint($light_grey, 30%), tint($lightest_grey, 20%));
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'ProximaNova-Light', serif;
+	@include lightweight-font;
 }
 
 div#content-wrapper {
@@ -58,11 +96,11 @@ header#main-header {
 		p {
 			margin: 0;
 			padding: 0;
-			font: 18px 'ProximaNova-Semibold', serif;
+			@include semiboldweight-font;
+			
 			text-transform: uppercase;
 			text-shadow: #000000 0px 1px 1px;
-			color: #ffffff;
-			
+			color: #ffffff;			
 			a {
 				text-shadow: #464646 0px 1px 1px;
 				text-decoration: none;
@@ -81,7 +119,8 @@ nav#main-nav {
 			padding-bottom: 22px;
 			display: block;
 			float: left;
-			font: 18px 'ProximaNova-Regular', serif;
+			@include regularweight-font;
+			@include largesize-font;
 			text-transform: uppercase;
 			text-shadow: #000000 0px 1px 1px;
 			color: #ffffff;
@@ -125,8 +164,8 @@ header#sub-header {
 		li {
 			float: left;
 			margin-right: $standard_margin;
-			font-family: 'ProximaNova-Regular', serif;
-			font-size: 14px;
+			@include regularweight-font;
+			@include smallsize-font;
 			padding: 12px 0;
 			text-shadow: $mid_grey 0px 1px 1px;
 			a {
@@ -157,18 +196,18 @@ header#page-header.projects {
 }
 
 h1.main-heading{
-	font-family: 'ProximaNova-Semibold', serif;
+	@include semiboldweight-font;
 	text-transform: uppercase;
 }
 
 h2.main-heading {
 	padding: 60px 0 60px $standard_margin;
-	font-family: 'ProximaNova-Semibold', serif;
+	@include semiboldweight-font;
 	text-transform: uppercase;
 }
 
 strong {
-	font-family: 'ProximaNova-Bold', serif;
+	@include boldweight-font;
 	font-weight: normal;
 }
 
@@ -177,6 +216,7 @@ footer#global {
 	padding: $standard_margin 0;
 	margin: $standard_margin $standard_margin 0 $standard_margin;
 	h6 {
+		@include smallestsize-font;
 		@include blacklink;
 	}
 }
@@ -193,33 +233,35 @@ div.portfolio-form {
 		margin-bottom: $standard-margin;
 	}
 	label {
-		font-family: 'ProximaNova-Semibold', serif;
-		font-size: 20px;
+		@include semiboldweight-font;
+		@include largesize-font;
 	}
 }
 
 a.view-project {
 	@include border-radius(5px);
 	background-color: $light_grey;
-	font-family: 'ProximaNova-Regular', serif;
-	font-size: 18px;
+	@include regularweight-font;
+	@include largesize-font;
 	color: #FFFFFF;
 	text-decoration: none;
 	padding: 10px 15px;
 	text-shadow: $mid_grey 0px 1px 1px;
+	/* fade transition of color */
+	@include transition (all, 0.5s, ease-in-out);
 	&:hover {
-	background-color: $mid_grey;
+	background-color: #666666;
 	text-shadow: black 0px 1px 1px;	
 	}
 }
 
 .nav-buttons {
 	padding-top: 20px;
-	font-size: 18px;
+	@include largesize-font;
 }
 
 a.title-link {
-	font-family: 'ProximaNova-Light', serif;
+	@include lightweight-font;
 	color: $light_grey;
 	text-decoration: none;
 	&:hover {
