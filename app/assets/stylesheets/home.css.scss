@@ -18,9 +18,6 @@
 			color: black;
 		}
 	}
-	.description {
-		display: none;
-	}
 	.teaser {
 		float: left;
 		width: 45.328282828282828%;
@@ -30,7 +27,8 @@
 			padding: 0;
 		}
 		p {
-			padding: 20px 0;
+			@include smallsize-font;
+			padding: 1.4em 0;
 		}
 	}
 	#work-history {
@@ -92,10 +90,13 @@ section#social-links {
 	}
 	img {
 		float: left;
-		padding-right: 20px;
+		padding-right: 1.6em;
 	}
 	article {
-		padding-bottom: 15px;
+		padding-bottom: 1em;
+	}
+	section.single {
+		padding-bottom: 1.5em;
 	}
 }
 
@@ -108,8 +109,7 @@ section#lastfm {
 	}
 }
 
-section#goodread {
-	padding-bottom: 20px;
+section#goodread {	
 	header {
 		background-image:url("icons/goodread-icon.png");
 	}
@@ -118,18 +118,12 @@ section#goodread {
 	}
 }
 
-section#twitter {
-	padding-bottom: 20px;
-	header {
-		background-image:url("icons/twitter-icon.png");
-	}
+section#twitter header {
+	background-image:url("icons/twitter-icon.png");
 }
 
-section#foursquare {
-	padding-bottom: 20px;
-	header {
-		background-image:url("icons/foursquare-icon.png");
-	}
+section#foursquare header {
+	background-image:url("icons/foursquare-icon.png");
 }
 
 section#pinboard header {

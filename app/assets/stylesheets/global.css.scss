@@ -1,4 +1,4 @@
-$standard_margin: 37px;
+$standard_margin: 2em;
 $lightest_grey: #dddddd;
 $dark_grey: #2d2d2d;
 $mid_grey: #444444;
@@ -195,15 +195,13 @@ header#page-header.projects {
 	padding: 185px 0 60px $standard_margin;
 }
 
-h1.main-heading{
+.main-heading{
 	@include semiboldweight-font;
 	text-transform: uppercase;
 }
 
 h2.main-heading {
 	padding: 60px 0 60px $standard_margin;
-	@include semiboldweight-font;
-	text-transform: uppercase;
 }
 
 strong {
@@ -245,10 +243,10 @@ a.view-project {
 	@include largesize-font;
 	color: #FFFFFF;
 	text-decoration: none;
-	padding: 10px 15px;
+	padding: 0.7em 1em;
 	text-shadow: $mid_grey 0px 1px 1px;
 	/* fade transition of color */
-	@include transition (all, 0.5s, ease-in-out);
+	@include transition (background-color, 0.5s, ease-in-out);
 	&:hover {
 	background-color: #666666;
 	text-shadow: black 0px 1px 1px;	
