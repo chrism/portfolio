@@ -69,6 +69,16 @@
 }
 
 section#social-links {
+	margin: 0;
+	padding: 0 3.020408163265306%; /* $standard_margin / 1225 */
+	column-count: 3;
+	moz-coloumn-count: 3;
+	-webkit-column-count: 3;
+	
+	-moz-column-gap : 3.020408163265306%;
+	-webkit-column-gap : 3.020408163265306%;
+	column-gap : 3.020408163265306%;
+	
 	clear: left;
 	.main-heading {
 		padding-top: 0;
@@ -99,24 +109,23 @@ section#social-links {
 	article {
 		padding-bottom: 1em;
 	}
+	section {
+		-webkit-column-break-inside: avoid;
+	}
 	section.single {
 		padding-bottom: 1.5em;
 	}
-	section {
-		margin-left: 3.020408163265306%; /* $standard height / 1225 */
-		width: 29.306122448979592%; /* 359 / 1225 */
-	}
+
 }
 
 section#pinboard {
-	float:left;
+	-webkit-column-break-after: always;
 	header {
 		background-image:url("icons/pinboard-icon.png");
 	}
 }
 
 section#goodread {
-	float: left;
 	header {
 		background-image:url("icons/goodread-icon.png");
 	}
@@ -126,28 +135,25 @@ section#goodread {
 }
 
 section#instapaper {
-	float: left;
+	-webkit-column-break-after: always;
 	header {
 		background-image:url("icons/instapaper-icon.png");
 	}
 }
 
 section#twitter {
-	float: left;
 	header {
 		background-image:url("icons/twitter-icon.png");
 	}
 }
 
 section#foursquare {
-	float: left;
 	header {
 		background-image:url("icons/foursquare-icon.png");
 	}
 }
 
 section#lastfm {
-	float: left;
 	header {
 	background-image:url("icons/lastfm-icon.png");
 	}

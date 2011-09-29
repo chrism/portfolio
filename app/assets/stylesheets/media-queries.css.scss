@@ -23,10 +23,22 @@
 	h2.main-heading {
 		padding: 20px 0 20px 3.020408163265306% !important;
 	}
+	
 }
 
 @media screen and (max-width: 870px) {
-	section#social-links section {
-		width: 45.469387755102041%;
+	section#social-links {
+		padding: 0 3.020408163265306%; /* $standard_margin / 1225 */
+		column-count: 2;
+		moz-coloumn-count: 2;
+		-webkit-column-count: 2;
+
+		-moz-column-gap : 3.020408163265306%;
+		-webkit-column-gap : 3.020408163265306%;
+		column-gap : 3.020408163265306%;
+		
+		section#instapaper, section#pinboard {
+			-webkit-column-break-after: auto;
+		}
 	}
 }

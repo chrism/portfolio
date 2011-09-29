@@ -3,7 +3,7 @@
 </header>
 <section id="projectimages">
 	<% @projectimages.each do |projectimage| %>
-		<h2><%= link_to projectimage.url, project_projectimage_path(@project, projectimage) %></h2>
+		<h2><%= link_to projectimage.url, [@project, projectimage] %></h2>
 		<h6><%= projectimage.position %> / <%= projectimage.mainimage %></h6>
 		<%= link_to 'Edit', edit_project_projectimage_path(@project.id, projectimage) %>
 	<% end %>
